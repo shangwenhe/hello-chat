@@ -1,9 +1,10 @@
+import MainTabBar from '@/components/MainTabBar';
 import { Outlet } from 'umi';
-import './index.less'
 export default () => {
   return (
     <>
       <Outlet />
+      <MainTabBar></MainTabBar>
     </>
   );
 }
