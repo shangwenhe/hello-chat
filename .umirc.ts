@@ -31,9 +31,14 @@ export default defineConfig({
       component: '@/layouts/webview',
       routes: [
         {
-          path: '/webview',
+          path: '/webview/news',
           component: '@/pages/webview/news'
         },
+        {
+          path: '/webview/information/:userId',
+          component: '@/pages/webview/information'
+        },
+
       ]
     },
 

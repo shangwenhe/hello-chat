@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Avatar, Badge, List, TabBar } from 'antd-mobile'
+import { Avatar, Badge, List, Space, TabBar } from 'antd-mobile'
 import styles from './index.less';
 import {
   CouponOutline,
@@ -17,9 +17,9 @@ export default function Page() {
 
   const [ avatar, setAvatar] =useState<string>('https://images.unsplash.com/photo-1548532928-b34e3be62fc6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ')
 
-
   return (
     <>
+      <Space direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
       <List>
         <List.Item
           prefix={<Avatar src={ avatar } style={{ '--size': '64px' }}   />}
@@ -34,14 +34,14 @@ export default function Page() {
           Novalee Spicer
         </List.Item>
       </List>
-      <List header='可点击的功能列表'>
+      <List>
         <List.Item prefix={<CouponOutline />} onClick={() => {}}>
           服务
         </List.Item>
       </List>
 
 
-      <List header='可点击的功能列表'>
+      <List>
         <List.Item prefix={<CompassOutline />} onClick={() => {}}>
           收藏
         </List.Item>
@@ -59,9 +59,9 @@ export default function Page() {
         </List.Item>
       </List>
 
-      
 
-      <List header='可点击的功能列表'>
+
+      <List>
         <List.Item prefix={<ReceivePaymentOutline />} onClick={() => {}}>
           账单
         </List.Item>
@@ -69,6 +69,7 @@ export default function Page() {
           设置
         </List.Item>
       </List>
+      </Space>
 
     </>
   );

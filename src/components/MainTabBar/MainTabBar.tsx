@@ -29,7 +29,7 @@ export default function MainTabBar() {
         active ? <MessageFill /> : <MessageOutline />,
       badge: '99+',
     },
-    
+
     {
       key: '/contacts',
       title: '通讯录',

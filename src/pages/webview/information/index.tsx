@@ -8,6 +8,7 @@ import {
   UnorderedListOutline,
   UserOutline,
 } from 'antd-mobile-icons'
+import IMInput from './IMInput';
 
 
 export default function Page() {
@@ -17,7 +18,7 @@ export default function Page() {
 
   return (
     <>
-      news 这是一条新闻区域
+      <IMInput></IMInput>
     </>
   );
 }
