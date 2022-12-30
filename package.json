@@ -9,8 +9,10 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "@umijs/max": "^4.0.41",
     "antd-mobile": "^5.27.0",
-    "umi": "^4.0.40"
+    "axios": "^1.2.2",
+    "umi": "^4.0.41"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

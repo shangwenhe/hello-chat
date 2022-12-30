@@ -41,7 +41,6 @@ export default defineConfig({
 
       ]
     },
-
     // { path: '/me', component: '@/pages/me' },
   ],
 });
