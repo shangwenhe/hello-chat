@@ -3,8 +3,8 @@ import { defineConfig } from "umi";
 export default defineConfig({
   npmClient: 'npm',
   routes: [
-    { path: '/', redrect: '/user' },
-    { 
+    { path: '/', redirect: '/user' },
+    {
       path: '/',
       component: '@/layouts/main',
       routes: [
@@ -26,17 +26,17 @@ export default defineConfig({
         }
       ]
     },
-    { 
-      path: '/webview', 
+    {
+      path: '/webview',
       component: '@/layouts/webview',
       routes: [
-        { 
-          path: '/webview', 
+        {
+          path: '/webview',
           component: '@/pages/webview/news'
         },
       ]
     },
-    
+
     // { path: '/me', component: '@/pages/me' },
   ],
 });
