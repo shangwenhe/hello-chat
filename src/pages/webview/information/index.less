@@ -17,6 +17,7 @@
   justify-content: space-evenly;
   align-items: flex-start;
   gap: 5px;
+  z-index: 1010;
 }
 
 .im-input-item {
@@ -37,26 +38,48 @@
 
 .avatar {
   --border-radius: 32px;
-  margin-top: 24px;
+  margin-top: 7px;
 }
 
 .infomation {
   .adm-popover {
+    z-index: 10;
     left: 0;
-    top: 15px;
+    top: 5px;
     position: relative;
-  }
-  .adm-popover-arrow.adm-popover-arrow-right {
-    top: 30px;
-    right: -8px;
-    --arrow-icon-rotate:270deg;
-  }
-  .adm-popover-arrow.adm-popover-arrow-left {
-    left: -8px;
-    top: 18px;
-    --arrow-icon-rotate: 90deg;
+    display: flex;
+    justify-content: flex-start;
+    &-left{
+      margin-right: 30px;
+      .adm-popover-arrow {
+        top: 15px;
+        left: -8px;
+        --arrow-icon-rotate: 90deg;
+      }
+    }
+    &-right {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 30px;
+      .adm-popover-arrow {
+        top: 15px;
+        right: -8px;
+        --arrow-icon-rotate:270deg;
+      }
+    }
   }
   .adm-popover-inner{
     width: fit-content;
+  }
+  .adm-list-item-content-main{
+    padding: 5px 0;
+    margin-bottom: 10px;
+  }
+}
+.wechat-list {
+  .adm-list-body-inner {
+    height: calc(100vh - 44px);
+    overflow-x: hidden ;
+    overflow-y: scroll ;
   }
 }
