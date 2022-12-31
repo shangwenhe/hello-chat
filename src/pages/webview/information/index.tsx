@@ -38,8 +38,8 @@ export default function Page() {
 
   return (
     <>
-      <ChatList currentUser={currentUser} userChat={userChat} ></ChatList>
-      <Form form={form} onFinish={onFinish}>
+      <ChatList currentUser={currentUser} userChat={userChat}  ></ChatList>
+      <Form form={form} onFinish={onFinish} initialValues={{content: ''}}>
         <IMInput form={form}></IMInput>
       </Form>
     </>

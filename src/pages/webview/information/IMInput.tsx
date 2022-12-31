@@ -3,7 +3,7 @@ import { Input, Button, Form } from 'antd-mobile'
 import './index.less'
 import styles from './index.less'
 import { AudioOutline, AddCircleOutline, SmileOutline  } from 'antd-mobile-icons'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FormInstance } from 'antd-mobile/es/components/form'
 
 interface IIMInputProps {
@@ -17,19 +17,26 @@ export default ({ form }: IIMInputProps) => {
 
   const onSend = () => {
     form.submit();
+    onChange("")
   }
+
+  const inputProps = {
+    className: styles.input,
+    style: {'--font-size': '14px'},
+    placeholder: '请输入内容',
+    value,
+    onChange,
+  }
+
+  useEffect(()=>{
+    console.log("value", value);
+  }, [value])
 
   return <>
       <div className={styles['im-input']}>
         <AudioOutline className={styles['im-input-item']} fontSize={fontSize} />
         <Form.Item noStyle name="content">
-          <Input
-            className={styles.input}
-            style={{'--font-size': '14px'}}
-            placeholder='请输入内容'
-            value={value}
-            onChange={onChange}
-          />
+          <Input { ...inputProps }/>
         </Form.Item>
         <SmileOutline className={styles['im-input-item']} fontSize={fontSize} />
         {(value.length > 0 ?
