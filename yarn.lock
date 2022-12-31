@@ -2124,9 +2124,9 @@
     "@types/yargs-parser" "*"
 
 "@types/yargs@^17.0.8":
-  version "17.0.17"
-  resolved "https://registry.npmmirror.com/@types/yargs/-/yargs-17.0.17.tgz#5672e5621f8e0fca13f433a8017aae4b7a2a03e7"
-  integrity sha512-72bWxFKTK6uwWJAVT+3rF6Jo6RTojiJ27FQo8Rf60AL+VZbzoVPnMFhKsUnbjR8A3BTCYQ7Mv3hnl8T0A+CX9g==
+  version "17.0.18"
+  resolved "https://registry.npmmirror.com/@types/yargs/-/yargs-17.0.18.tgz#466225ab4fbabb9aa711f5b406796daf1374a5b7"
+  integrity sha512-eIJR1UER6ur3EpKM3d+2Pgd+ET+k6Kn9B4ZItX0oPjjVI5PrfaRjKyLT5UYendDpLuoiJMNJvovLQbEXqhsPaw==
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -2416,7 +2416,7 @@
   dependencies:
     tsx "^3.12.1"
 
-"@umijs/plugins@4.0.41":
+"@umijs/plugins@4.0.41", "@umijs/plugins@^4.0.41":
   version "4.0.41"
   resolved "https://registry.npmmirror.com/@umijs/plugins/-/plugins-4.0.41.tgz#ce52c31bf0b0979aa802d176da5e59360cb121f9"
   integrity sha512-csfnvB+L6vPnZMy68hkn0/s8YQpT7hsLKZufhu47AxHdPZxHp+DbVe64Wti1ZNKtHGV821FGCjBBb91q/MithA==
@@ -3394,9 +3394,9 @@ core-js-compat@^3.25.1:
     browserslist "^4.21.4"
 
 core-js-pure@^3.8.1:
-  version "3.27.0"
-  resolved "https://registry.npmmirror.com/core-js-pure/-/core-js-pure-3.27.0.tgz#091dce4799a5aad4cfde930ea747b0a1962388c5"
-  integrity sha512-fJml7FM6v1HI3Gkg5/Ifc/7Y2qXcJxaDwSROeZGAZfNykSTvUk94WT55TYzJ2lFHK0voSr/d4nOVChLuNCWNpA==
+  version "3.27.1"
+  resolved "https://registry.npmmirror.com/core-js-pure/-/core-js-pure-3.27.1.tgz#ede4a6b8440585c7190062757069c01d37a19dca"
+  integrity sha512-BS2NHgwwUppfeoqOXqi08mUqS5FiZpuRuJJpKsaME7kJz0xxuk0xkhDdfMIlP/zLa80krBqss1LtD7f889heAw==
 
 core-js@3.22.4:
   version "3.22.4"
@@ -8152,7 +8152,7 @@ typescript@^4.1.2:
   resolved "https://registry.npmmirror.com/typescript/-/typescript-4.9.4.tgz#a2a3d2756c079abda241d75f149df9d561091e78"
   integrity sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==
 
-umi@4.0.41, umi@^4.0.41:
+umi@4.0.41:
   version "4.0.41"
   resolved "https://registry.npmmirror.com/umi/-/umi-4.0.41.tgz#e1b5fad40cdefa04ea71f2e31f8a80a6fdbb15d1"
   integrity sha512-0yViucWZPtliPeoczh0sH3MV665s9B7rD2l8rbUCqyduX1NN/D12IE6BD5USH6+FcMjxIxF8DyAX0PhUiLsOyQ==

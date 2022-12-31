@@ -1,5 +1,6 @@
 import React from 'react'
 import { IndexBar, List, Image } from 'antd-mobile'
+import { history } from '@umijs/max'
 
 const getRandomList = (min: number, max: number): string[] => {
   return new Array(Math.floor(Math.random() * (max - min) + min)).fill('')
@@ -26,6 +27,11 @@ const groups = Array(26)
   }))
 
 export default () => {
+  const openDetail = (info: any) => {
+    console.log(info)
+    const id: string = '123';
+    history.push(`/contacts/${id}`);
+  }
   return (
     <div style={{ height: window.innerHeight }}>
       <IndexBar>
@@ -39,17 +45,18 @@ export default () => {
             >
               <List>
                 {items.map((item, index) => (
-                  <List.Item prefix={
-                    <Image
+                  <List.Item prefix={ <Image
                     src={avatar}
                     style={{ borderRadius: 20 }}
                     fit='cover'
                     width={40}
                     height={40}
-                  />
-                  } key={index} >
+                  /> }
+                  key={index}
+                  onClick={()=>{openDetail(item)}}
+                  arrow={false}
+                  >
                   {item}
-                  
                   </List.Item>
                 ))}
               </List>

@@ -2,6 +2,8 @@ import { defineConfig } from "umi";
 
 export default defineConfig({
   npmClient: 'npm',
+  model: {},
+  request: {},
   routes: [
     { path: '/', redirect: '/user' },
     {
@@ -27,16 +29,20 @@ export default defineConfig({
       ]
     },
     {
-      path: '/webview',
+      path: '/',
       component: '@/layouts/webview',
       routes: [
         {
-          path: '/webview/news',
+          path: '/news',
           component: '@/pages/webview/news'
         },
         {
-          path: '/webview/information/:userId',
+          path: '/wechat/:userId',
           component: '@/pages/webview/information'
+        },
+        {
+          path: '/contacts/:userId',
+          component: '@/pages/webview/contact'
         },
 
       ]

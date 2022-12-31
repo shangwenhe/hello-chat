@@ -50,7 +50,7 @@ export default () => {
 
   const openIM = (user: IUserInfo)=>{
     history.push({
-      pathname: `/webview/information/${user.id}`
+      pathname: `/wechat/${user.id}`
     })
   }
 

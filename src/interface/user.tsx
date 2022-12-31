@@ -7,7 +7,7 @@ export interface IUserInfo {
 
 export interface IUserChat {
   content: string,
-  type?: string,
-  time?: string,
-  user?: IUserInfo
+  type: string,
+  time: string,
+  user: IUserInfo
 }

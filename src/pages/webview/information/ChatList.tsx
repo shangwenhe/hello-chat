@@ -4,6 +4,8 @@ import ChatPopover from './ChatPopover'
 import { IUserChat, IUserInfo } from '@/interface/user'
 import './index.less'
 import styles from './index.less'
+import { useRef } from 'react'
+import { useEffect } from 'react'
 
 interface IChatListPorps {
   currentUser: IUserInfo,
@@ -11,9 +13,19 @@ interface IChatListPorps {
 }
 
 export default ({ currentUser, userChat }: IChatListPorps) => {
+  const chatListEle = useRef<{ nativeElement: HTMLInputElement } | null>(null);
+  useEffect(()=>{
+    const chatList =  chatListEle.current;
+    if (chatList){
+      if (chatList.nativeElement) {
+        const item = chatList?.nativeElement.querySelector('.adm-list-item:last-child')
+        item?.scrollIntoView()
+      }
+    }
+  }, [userChat])
 
   return <>
-      <List className='wechat-list' style={{'--border-inner': 'none','--border-bottom': 'none', '--border-top': 'none', '--align-items':'flex-start' }} >
+      <List ref={chatListEle} className='wechat-list' style={{'--border-inner': 'none','--border-bottom': 'none', '--border-top': 'none', '--align-items':'flex-start' }} >
         {userChat.map((item:IUserChat, index: number)=> (
           <List.Item key={index} className='infomation'
             prefix={ item.user.id !== currentUser.id && <Avatar className={styles.avatar} src={item.user.avatar} /> }
