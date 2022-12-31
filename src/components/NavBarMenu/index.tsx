@@ -10,6 +10,7 @@ import {
   AntOutline
 } from 'antd-mobile-icons'
 import { Action } from "antd-mobile/es/components/popover";
+import styles from './index'
 interface NavBarMenuProps {
   title: string;
 }
@@ -42,7 +43,8 @@ const NavBarMenu:FC<NavBarMenuProps> = ({title}) => {
   )
 
   return <>
-    <NavBar backArrow={false} right={right}>{title}</NavBar>
+
+    <NavBar style={{'--height': '58px'}} backArrow={false} right={right}>{title}</NavBar>
     <Mask
       color='white'
       visible={visible}

@@ -1,6 +1,10 @@
-import { IUserChat } from "@/interface/user";
-import { AxiosResponse, get, useAxios } from "./useAxios";
+import { IUserChat, IUserInfo } from "@/interface/user";
+import { ResponseLayout, get } from "./request.config";
 
-export const getChart = (id: number): Promise<AxiosResponse<IUserChat[]>> => {
-  return get(`/api/chart/${id}`)
+export const getChart = (id: number): Promise<ResponseLayout<IUserChat[]>> => {
+  return get(`/api/user/chart/${id}`)
+}
+
+export const getCurrentUser = (): Promise<ResponseLayout<IUserInfo>> => {
+  return get(`/api/current-user`)
 }

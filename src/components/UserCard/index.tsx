@@ -9,7 +9,7 @@ interface IUserCard  {
 }
 
 const UserCard:FC<IUserCard> = (props: IUserCard ) => {
-  const [ avatar, setAvatar] = useState<string>('https://images.unsplash.com/photo-1548532928-b34e3be62fc6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ')
+  const [ avatar, setAvatar] = useState<string>('https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1548532928-b34e3be62fc6.jpeg')
   return <>
     <List>
       <List.Item

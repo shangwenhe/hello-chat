@@ -24,7 +24,7 @@ export default function MainTabBar() {
   const tabs = [
     {
       key: '/wechat',
-      title: '我的消息',
+      title: '消息',
       icon: (active: boolean) =>
         active ? <MessageFill /> : <MessageOutline />,
       badge: '99+',

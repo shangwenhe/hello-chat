@@ -17,7 +17,13 @@ const words: string[] = [
   "Tian Jin"
 ]
 
-const avatar = 'https://images.unsplash.com/photo-1548532928-b34e3be62fc6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+
+
+
+const avatar = [ 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1548532928-b34e3be62fc6.jpeg',
+'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1493666438817-866a91353ca9.jpeg',
+'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1542624937-8d1e9f53c1b9.jpeg',
+'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1546967191-fdfb13ed6b1e.jpeg']
 
 const charCodeOfA = 'A'.charCodeAt(0)
 const groups = Array(26)
@@ -48,8 +54,8 @@ export default () => {
               <List>
                 {items.map((item, index) => (
                   <List.Item prefix={ <Image
-                    src={avatar}
-                    style={{ borderRadius: 20 }}
+                    src={avatar[index%4]}
+                    style={{ borderRadius: 5 }}
                     fit='cover'
                     width={40}
                     height={40}

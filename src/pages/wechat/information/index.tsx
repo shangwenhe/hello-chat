@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import IMInput from './IMInput';
 import ChatList from './ChatList';
-import { IUserChat, IUserInfo } from '@/interface/user';
+import { IUserChat } from '@/interface/user';
 import { getChart } from '@/api/user';
 import { Form, NavBar, Space } from 'antd-mobile';
 import { MoreOutline } from 'antd-mobile-icons'
@@ -10,14 +10,8 @@ import { history, useModel } from 'umi';
 
 export default function Page() {
 
-  const { userInfo } = useModel('user');
-  const currentUser: IUserInfo = userInfo;
+  const { userInfo: currentUser } = useModel('user');
 
-  const chartUser: IUserInfo = {
-    ...userInfo,
-    name: '大宝',
-    id: 10
-  }
   const [userChat, setUserChat] =  useState<IUserChat[]>([]);
 
   useEffect(()=>{
@@ -36,7 +30,7 @@ export default function Page() {
             time: '',
             type: 'text',
             user: {
-              ...userInfo,
+              ...currentUser,
               name: '张三',
               id: 999,
             }
@@ -76,8 +70,8 @@ export default function Page() {
 
   return (
     <>
-      <NavBar right={right} onBack={back}>
-        {chartUser.name}
+      <NavBar style={{'--height': '58px'}} right={right} onBack={back}>
+        {currentUser.name}
       </NavBar>
       <ChatList currentUser={currentUser} userChat={userChat}  ></ChatList>
       <Form form={form} onFinish={onFinish} initialValues={{content: ''}}>

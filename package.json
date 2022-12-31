@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "@umijs/max": "^4.0.41",
-    "antd-mobile": "^5.27.0",
-    "axios": "^1.2.2"
+    "antd-mobile": "^5.27.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
