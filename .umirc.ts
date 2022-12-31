@@ -38,11 +38,11 @@ export default defineConfig({
         },
         {
           path: '/wechat/:userId',
-          component: '@/pages/webview/information'
+          component: '@/pages/wechat/information'
         },
         {
           path: '/contacts/:userId',
-          component: '@/pages/webview/contact'
+          component: '@/pages/contacts/detail'
         },
 
       ]

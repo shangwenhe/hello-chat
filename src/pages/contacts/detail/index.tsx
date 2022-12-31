@@ -1,9 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
-  CouponOutline,
-  CompassOutline,
   PhoneFill,
-  SetOutline,
   PhonebookOutline,
   LockOutline,
   MessageOutline,
@@ -15,6 +12,7 @@ import { MoreOutline } from 'antd-mobile-icons'
 import { history, useModel } from 'umi';
 import './index.less';
 import UserCard from '@/components/UserCard';
+import MediaSheet from '@/components/MediaSheet';
 
 
 export default function Page() {
@@ -32,6 +30,8 @@ export default function Page() {
   const back = () =>{
     history.back();
   }
+  const [visible, setVisible] = useState(false)
+
   return (
     <>
       <NavBar right={right} onBack={back}>
@@ -60,14 +60,19 @@ export default function Page() {
           </List.Item>
         </List>
         <List>
-          <List.Item prefix={<MessageOutline />} onClick={() => {}}>
+          <List.Item prefix={<MessageOutline />} onClick={() => {
+            history.push(`/wechat/${userInfo.id}`)
+          }}>
             发消息
           </List.Item>
-          <List.Item prefix={<PhoneFill />} onClick={() => {}}>
+          <List.Item prefix={<PhoneFill />} onClick={() => {
+            setVisible(true)
+          }}>
             音视频通话
           </List.Item>
         </List>
       </Space>
+      <MediaSheet visible={ visible } onClose={ setVisible }></MediaSheet>
     </>
   );
 }

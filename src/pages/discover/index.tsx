@@ -1,10 +1,61 @@
-import React from 'react';
-import styles from './index.less';
+import React from 'react'
+import { Avatar, Badge, List, Space } from 'antd-mobile'
+import './index.less';
+import {
+  ScanningOutline,
+  SearchOutline,
+  AppstoreOutline,
+  EyeOutline,
+  MovieOutline,
+  PictureOutline
+} from 'antd-mobile-icons'
+import { useModel } from '@umijs/max';
+import NavBarMenu from '@/components/NavBarMenu';
 
 export default function Page() {
+  const { userInfo } = useModel("user")
+
+
   return (
-    <div>
-      <h1 className={styles.title}>discover Page index</h1>
-    </div>
+    <>
+      <NavBarMenu title='发现'></NavBarMenu>
+      <Space direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
+        <List>
+          <List.Item
+            prefix={<PictureOutline />}
+            extra={
+              <Badge content={Badge.dot}>
+                <Avatar src={userInfo.avatar} style={{ '--size': '32px' }}  />
+              </Badge>
+            }
+            onClick={() => {}}>
+            朋友圈
+          </List.Item>
+        </List>
+        <List>
+          <List.Item prefix={<ScanningOutline />} onClick={() => {}}>
+            扫一扫
+          </List.Item>
+        </List>
+
+        <List>
+          <List.Item prefix={<MovieOutline />} onClick={() => {}}>
+            视频号
+          </List.Item>
+          <List.Item prefix={<EyeOutline />} onClick={() => {}}>
+            看一看
+          </List.Item>
+          <List.Item prefix={<SearchOutline />} onClick={() => {}}>
+            搜一搜
+          </List.Item>
+        </List>
+        <List>
+          <List.Item prefix={<AppstoreOutline />} onClick={() => {}}>
+            小程序
+          </List.Item>
+        </List>
+      </Space>
+
+    </>
   );
 }

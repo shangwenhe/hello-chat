@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Image, List } from 'antd-mobile'
 import { history } from 'umi';
+import NavBarMenu from '@/components/NavBarMenu';
 
 interface IUserInfo {
   avatar: string,
@@ -55,25 +56,29 @@ export default () => {
   }
 
   return (
-    <List header='用户列表'>
-      {users.map((user, index: number) => (
-        <List.Item
-          key={user.name + index}
-          prefix={
-            <Image
-              src={user.avatar}
-              style={{ borderRadius: 20 }}
-              fit='cover'
-              width={40}
-              height={40}
-              onClick={()=>{openIM(user)}}
-            />
-          }
-          description={user.description}
-        >
-          {user.name}
-        </List.Item>
-      ))}
-    </List>
+    <>
+      <NavBarMenu title='我的消息'></NavBarMenu>
+      <List>
+        {users.map((user, index: number) => (
+          <List.Item
+            key={user.name + index}
+            prefix={
+              <Image
+                src={user.avatar}
+                style={{ borderRadius: 20 }}
+                fit='cover'
+                width={40}
+                height={40}
+                onClick={()=>{openIM(user)}}
+              />
+            }
+            description={user.description}
+          >
+            {user.name}
+          </List.Item>
+        ))}
+      </List>
+    </>
+
   )
 }
