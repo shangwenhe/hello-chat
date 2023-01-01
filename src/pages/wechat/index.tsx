@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Image, List } from 'antd-mobile'
+import { Image, List, NavBar, Space } from 'antd-mobile'
 import { history } from 'umi';
 import NavBarMenu from '@/components/NavBarMenu';
 import { getWeChartList } from '@/api/chat';
 import { IChatInfo } from '@/interface/chat';
-
-
+import './index.less'
+import { BellMuteOutline  } from 'antd-mobile-icons'
 
 export default () => {
 
@@ -24,6 +24,15 @@ export default () => {
       pathname: `/wechat/${user.id}`
     })
   }
+
+  const chatTitleRight = (
+    <div style={{ fontSize: 12 }}>
+      <Space style={{ '--gap': '4px' }}>
+        <>10:09</>
+        <BellMuteOutline />
+      </Space>
+    </div>
+  )
 
   return (
     <>
@@ -45,7 +54,10 @@ export default () => {
             description={user.description}
             onClick={()=>{openIM(user)}}
           >
-            {user.name}
+            <NavBar
+              backArrow={user.name}
+              className='char-list-bar'
+              right={chatTitleRight} />
           </List.Item>
         ))}
       </List>
