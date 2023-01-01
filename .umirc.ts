@@ -1,8 +1,12 @@
 import { defineConfig } from "umi";
 
+const historyType = process.env.APP_ENV === 'dev' ?  'browser' : 'hash';
+
+console.log('historyType', historyType)
+
 export default defineConfig({
   history: {
-    type: 'hash'
+    type: historyType
   },
   publicPath: '/chat/',
   npmClient: 'npm',
