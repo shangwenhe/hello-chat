@@ -35,7 +35,7 @@ export default () => {
             prefix={
               <Image
                 src={user.avatar}
-                style={{ borderRadius: 5 }}
+                style={{ borderRadius: 'var(--adm-radius-s)' }}
                 fit='cover'
                 width={40}
                 height={40}

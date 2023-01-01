@@ -45,14 +45,14 @@ export default () => {
           return (
             <IndexBar.Panel
               index={title}
-              title={`标题${title}`}
-              key={`标题${title}`}
+              title={`${title}`}
+              key={`A-${title}`}
             >
               <List>
                 {items.map((item, index) => (
                   <List.Item prefix={ <Image
                     src={avatar[index%4]}
-                    style={{ borderRadius: 5 }}
+                    style={{ borderRadius: 'var(--adm-radius-s)' }}
                     fit='cover'
                     width={40}
                     height={40}

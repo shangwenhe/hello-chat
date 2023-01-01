@@ -20,7 +20,7 @@ export default function Page() {
 
   return (
     <>
-      <Space direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
+      <Space className='layout-scroll-content' direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)", paddingTop: 0 }}>
         <UserCard user={userInfo}></UserCard>
         <List>
           <List.Item prefix={<CouponOutline />} onClick={() => {}}>
