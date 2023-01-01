@@ -59,7 +59,11 @@ export default function Page() {
   const right = (
     <div style={{ fontSize: 24 }}>
       <Space style={{ '--gap': '16px' }}>
-        <MoreOutline />
+        <MoreOutline onClick={()=>{
+          history.push({
+            pathname: `/contacts/${currentUser.id}/settings`
+          });
+        }} />
       </Space>
     </div>
   );
@@ -70,7 +74,7 @@ export default function Page() {
 
   return (
     <>
-      <NavBar style={{'--height': '58px'}} right={right} onBack={back}>
+      <NavBar className='wechat-nav-bar' style={{'--height': 'var(--top-fixed-bar)', 'backgroundColor': 'var(--adm-color-box)'}} right={right} onBack={back}>
         {currentUser.name}
       </NavBar>
       <ChatList currentUser={currentUser} userChat={userChat}  ></ChatList>

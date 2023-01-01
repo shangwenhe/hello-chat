@@ -14,6 +14,7 @@ export default () => {
 
   useEffect(()=>{
     getWeChartList().then(({ data })=>{
+
       setUsers([ ...data ]);
     })
   }, [])
@@ -27,7 +28,7 @@ export default () => {
   return (
     <>
       <NavBarMenu title='消息'></NavBarMenu>
-      <List>
+      <List className='layout-scroll-content'>
         {users.map((user, index: number) => (
           <List.Item
             key={user.name + index}

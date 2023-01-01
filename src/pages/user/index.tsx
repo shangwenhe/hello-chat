@@ -12,7 +12,7 @@ import {
   PictureOutline
 } from 'antd-mobile-icons'
 import UserCard from '@/components/UserCard';
-import { useModel } from 'umi';
+import { history, useModel } from 'umi';
 
 export default function Page() {
 
@@ -45,14 +45,15 @@ export default function Page() {
             表情
           </List.Item>
         </List>
-
-
-
         <List>
           <List.Item prefix={<ReceivePaymentOutline />} onClick={() => {}}>
             账单
           </List.Item>
-          <List.Item prefix={<SetOutline />} onClick={() => {}}>
+          <List.Item prefix={<SetOutline />} onClick={() => {
+            history.push({
+              pathname: `/user/settings`
+            })
+          }}>
             设置
           </List.Item>
         </List>

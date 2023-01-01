@@ -6,6 +6,7 @@ import './index.less'
 import styles from './index.less'
 import { useRef } from 'react'
 import { useEffect } from 'react'
+import { history } from '@umijs/max'
 
 interface IChatListPorps {
   currentUser: IUserInfo,
@@ -24,12 +25,18 @@ export default ({ currentUser, userChat }: IChatListPorps) => {
     }
   }, [userChat])
 
+  const toContact = (user: IUserInfo) => {
+    history.push({
+      pathname: `/contacts/${user.id}`
+    })
+  }
+
   return <>
-      <List ref={chatListEle} className='wechat-list' style={{'--border-inner': 'none','--border-bottom': 'none', '--border-top': 'none', '--align-items':'flex-start' }} >
+      <List ref={chatListEle} className='wechat-popover-list' style={{'--border-inner': 'none','--border-bottom': 'none', '--border-top': 'none', '--align-items':'flex-start' }} >
         {userChat.map((item:IUserChat, index: number)=> (
           <List.Item key={index} className='infomation'
-            prefix={ item.user.id !== currentUser.id && <Avatar className={styles.avatar} src={item.user.avatar} /> }
-            extra={ item.user.id === currentUser.id && <Avatar className={styles.avatar} src={item.user.avatar} />}
+            prefix={ item.user.id !== currentUser.id && <Avatar className={styles.avatar} src={item.user.avatar} onClick={()=>{toContact(item.user)}} /> }
+            extra={ item.user.id === currentUser.id && <Avatar className={styles.avatar} src={item.user.avatar} onClick={()=>{toContact(item.user)}} />}
           >
             <ChatPopover content={item.content} placement={(item.user.id === currentUser.id? 'right': 'left')}></ChatPopover>
           </List.Item>

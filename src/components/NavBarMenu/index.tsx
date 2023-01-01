@@ -10,7 +10,8 @@ import {
   AntOutline
 } from 'antd-mobile-icons'
 import { Action } from "antd-mobile/es/components/popover";
-import styles from './index'
+import styles from './index.less'
+import { history } from "@umijs/max";
 interface NavBarMenuProps {
   title: string;
 }
@@ -26,7 +27,11 @@ const NavBarMenu:FC<NavBarMenuProps> = ({title}) => {
   const right = (
     <div style={{ fontSize: 24 }}>
       <Space style={{ '--gap': '16px' }}>
-        <SearchOutline />
+        <SearchOutline onClick={()=> {
+          history.push({
+            pathname: `/search`
+          })
+        }} />
         <Popover.Menu
           actions={actions}
           placement='topLeft'
@@ -43,8 +48,7 @@ const NavBarMenu:FC<NavBarMenuProps> = ({title}) => {
   )
 
   return <>
-
-    <NavBar style={{'--height': '58px'}} backArrow={false} right={right}>{title}</NavBar>
+    <NavBar className={styles.navbar} style={{'--height': 'var(--top-fixed-bar)'}} backArrow={false} right={right}>{title}</NavBar>
     <Mask
       color='white'
       visible={visible}

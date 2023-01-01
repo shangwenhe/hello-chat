@@ -76,10 +76,19 @@
     margin-bottom: 10px;
   }
 }
-.wechat-list {
-  .adm-list-body-inner {
-    height: calc(100vh - 44px - 45px);
-    overflow-x: hidden ;
-    overflow-y: scroll ;
-  }
+.wechat-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: var(--fixed-z-index);
+}
+
+.wechat-popover-list {
+  min-height: calc(100vh - var(--top-fixed-bar) - 45px);
+  padding-top: var(--top-fixed-bar);
+  padding-bottom: 45px;
+  overflow-x: hidden ;
+  overflow-y: scroll ;
 }

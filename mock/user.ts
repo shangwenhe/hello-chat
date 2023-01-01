@@ -177,7 +177,62 @@ export default {
         description: 'Commodi earum exercitationem id numquam vitae',
         id: '8',
       },
-    ]
-  },
+      {
+        avatar:
+          'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1548532928-b34e3be62fc6.jpeg',
+        name: 'Novalee Spicer',
+        description: 'Deserunt dolor ea eaque eos',
+        id: '11',
+      },
+      {
+        avatar:
+          'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1493666438817-866a91353ca9.jpeg',
+        name: 'Sara Koivisto',
+        description: 'Animi eius expedita, explicabo',
+        id: '12',
+      },
+      {
+        avatar:
+          'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1542624937-8d1e9f53c1b9.jpeg',
+        name: 'Marco Gregg',
+        description: 'Ab animi cumque eveniet ex harum nam odio omnis',
+        id: '13',
+      },
+      {
+        avatar:
+          'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1546967191-fdfb13ed6b1e.jpeg',
+        name: 'Edith Koenig',
+        description: 'Commodi earum exercitationem id numquam vitae',
+        id: '14',
+      },{
+        avatar:
+          'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1548532928-b34e3be62fc6.jpeg',
+        name: 'Novalee Spicer',
+        description: 'Deserunt dolor ea eaque eos',
+        id: '15',
+      },
+      {
+        avatar:
+          'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1493666438817-866a91353ca9.jpeg',
+        name: 'Sara Koivisto',
+        description: 'Animi eius expedita, explicabo',
+        id: '16',
+      },
+      {
+        avatar:
+          'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1542624937-8d1e9f53c1b9.jpeg',
+        name: 'Marco Gregg',
+        description: 'Ab animi cumque eveniet ex harum nam odio omnis',
+        id: '17',
+      },
+      {
+        avatar:
+          'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1546967191-fdfb13ed6b1e.jpeg',
+        name: 'Edith Koenig',
+        description: 'Commodi earum exercitationem id numquam vitae',
+        id: '18',
+      },
 
+    ]
+  }
 }

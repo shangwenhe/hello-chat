@@ -22,7 +22,9 @@ export default function Page() {
   const right = (
     <div style={{ fontSize: 24 }}>
       <Space style={{ '--gap': '16px' }}>
-        <MoreOutline />
+        <MoreOutline onClick={() => {
+            history.push({pathname: `/contacts/${userInfo.id}/settings`})
+          }} />
       </Space>
     </div>
   );
@@ -34,7 +36,7 @@ export default function Page() {
 
   return (
     <>
-      <NavBar right={right} onBack={back}>
+      <NavBar right={right} style={{'--height': 'var(--top-fixed-bar)'}} onBack={back}>
         {userInfo.name}
       </NavBar>
       <Space direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
@@ -48,14 +50,16 @@ export default function Page() {
           </List.Item>
 
           <List.Item prefix={<LockOutline />} onClick={() => {}}>
-            权限
+            朋友权限
           </List.Item>
         </List>
         <List>
           <List.Item prefix={<PictureOutline />} onClick={() => {}}>
             朋友圈
           </List.Item>
-          <List.Item prefix={<MoreOutline />} onClick={() => {}}>
+          <List.Item prefix={<MoreOutline />} onClick={() => {
+            history.push({pathname: `/contacts/${userInfo.id}/settings`})
+          }}>
             更多信息
           </List.Item>
         </List>

@@ -17,9 +17,6 @@ const words: string[] = [
   "Tian Jin"
 ]
 
-
-
-
 const avatar = [ 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1548532928-b34e3be62fc6.jpeg',
 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1493666438817-866a91353ca9.jpeg',
 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1542624937-8d1e9f53c1b9.jpeg',
@@ -40,8 +37,8 @@ export default () => {
     history.push(`/contacts/${id}`);
   }
   return (<>
-  <NavBarMenu title='通讯录'></NavBarMenu>
-    <div style={{ height: window.innerHeight }}>
+    <NavBarMenu title='通讯录'></NavBarMenu>
+    <div className='layout-scroll-content' style={{ height: "calc(100vh - 55px - 55px)" }}>
       <IndexBar>
         {groups.map(group => {
           const { title, items } = group

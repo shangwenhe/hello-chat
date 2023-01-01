@@ -19,7 +19,7 @@ export default function Page() {
   return (
     <>
       <NavBarMenu title='发现'></NavBarMenu>
-      <Space direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
+      <Space className='layout-scroll-content' direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
         <List>
           <List.Item
             prefix={<PictureOutline />}

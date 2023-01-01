@@ -1,10 +1,19 @@
 body {
   padding: 0;
   margin: 0;
+  --top-fixed-bar: 55px;
+  --bottom-fixed-bar: 55px;
+  --fixed-z-index: 1000;
 }
 .adm-input-element{
   text-indent: 0.5em;
 }
 body, #root{
   background-color: var(--adm-color-box)
+}
+
+.layout-scroll-content {
+  min-height: calc(100vh - var(--top-fixed-bar) - var(--bottom-fixed-bar));
+  padding-top: var(--top-fixed-bar);
+  padding-bottom: var(--bottom-fixed-bar);
 }

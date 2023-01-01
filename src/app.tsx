@@ -4,6 +4,7 @@ import { ResponseLayout } from './api/request.config';
 export const request: RequestConfig = {
   timeout: 2000,
 
+  // baseURL: 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat',
   transformRequest: [function (data: any) {
     // 对发送的 data 进行任意转换处理
     return data;

@@ -1,7 +1,7 @@
 
 export interface IUserInfo {
   name: string,
-  avatar?: string,
+  avatar: string,
   id: number
 }
 

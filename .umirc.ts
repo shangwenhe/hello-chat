@@ -1,6 +1,10 @@
 import { defineConfig } from "umi";
 
 export default defineConfig({
+  // history: {
+  //   type: 'hash'
+  // },
+  publicPath: '/chat/',
   npmClient: 'npm',
   model: {},
   request: {},
@@ -33,6 +37,10 @@ export default defineConfig({
       component: '@/layouts/webview',
       routes: [
         {
+          path: '/search',
+          component: '@/pages/webview/search'
+        },
+        {
           path: '/news',
           component: '@/pages/webview/news'
         },
@@ -43,6 +51,14 @@ export default defineConfig({
         {
           path: '/contacts/:userId',
           component: '@/pages/contacts/detail'
+        },
+        {
+          path: '/contacts/:userId/settings',
+          component: '@/pages/contacts/settings'
+        },
+        {
+          path: '/user/settings',
+          component: '@/pages/user/settings'
         },
 
       ]

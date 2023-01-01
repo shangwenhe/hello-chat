@@ -1,12 +1,13 @@
 .tabbar {
   width: 100%;
   position: fixed;
-  z-index: 1000;
+  z-index: var(--fixed-z-index);
   left: 0;
   bottom: 0;
-  padding-top: 8px;
+  padding-top: 4px;
   border-top: 1px solid #eee;
   background-color: #fefefe;
+  height: calc(var(--bottom-fixed-bar) - 4px);
 }
 
 .app {
