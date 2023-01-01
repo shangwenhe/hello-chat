@@ -1,10 +1,15 @@
 import type { RequestConfig } from 'umi';
 import { ResponseLayout } from './api/request.config';
 
+const baseURL =
+  process.env.APP_ENV === 'dev'
+    ? ''
+    : 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat';
+
+console.log("process.env.APP_ENV", process.env.APP_ENV)
 export const request: RequestConfig = {
   timeout: 2000,
-
-  // baseURL: 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat',
+  baseURL,
   transformRequest: [function (data: any) {
     // 对发送的 data 进行任意转换处理
     return data;

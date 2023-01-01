@@ -1,13 +1,16 @@
 import { defineConfig } from "umi";
 
 export default defineConfig({
-  // history: {
-  //   type: 'hash'
-  // },
+  history: {
+    type: 'hash'
+  },
   publicPath: '/chat/',
   npmClient: 'npm',
   model: {},
   request: {},
+  define: {
+    'process.env': process.env,
+  },
   routes: [
     { path: '/', redirect: '/user' },
     {
