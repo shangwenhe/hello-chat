@@ -8,7 +8,7 @@ export default defineConfig({
   history: {
     type: historyType
   },
-  publicPath: '/chat/',
+  // publicPath: '/chat/',
   npmClient: 'npm',
   model: {},
   request: {},
