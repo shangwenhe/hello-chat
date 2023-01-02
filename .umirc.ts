@@ -63,11 +63,32 @@ export default defineConfig({
           path: '/contacts/:userId/settings',
           component: '@/pages/contacts/settings'
         },
+
         {
           path: '/user/settings',
           component: '@/pages/user/settings'
         },
+        {
+          path: '/user/service',
+          component: '@/pages/user/service'
+        },
+        {
+          path: '/user/collection',
+          component: '@/pages/user/collection'
+        },
 
+        {
+          path: '/discover/findout',
+          component: '@/pages/discover/findout',
+        },
+        {
+          path: '/discover/video',
+          component: '@/pages/discover/video',
+        },
+        {
+          path: '/discover/search',
+          component: '@/pages/discover/search',
+        },
       ]
     },
   ],

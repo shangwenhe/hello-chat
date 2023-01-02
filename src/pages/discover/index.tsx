@@ -9,7 +9,7 @@ import {
   MovieOutline,
   PictureOutline
 } from 'antd-mobile-icons'
-import { useModel } from '@umijs/max';
+import { history, useModel } from '@umijs/max';
 import NavBarMenu from '@/components/NavBarMenu';
 
 export default function Page() {
@@ -39,13 +39,19 @@ export default function Page() {
         </List>
 
         <List>
-          <List.Item prefix={<MovieOutline />} onClick={() => {}}>
+          <List.Item prefix={<MovieOutline />} onClick={() => {
+            history.push({pathname: `/discover/video`})
+          }}>
             视频号
           </List.Item>
-          <List.Item prefix={<EyeOutline />} onClick={() => {}}>
+          <List.Item prefix={<EyeOutline />} onClick={() => {
+            history.push({pathname: `/discover/findout`})
+          }}>
             看一看
           </List.Item>
-          <List.Item prefix={<SearchOutline />} onClick={() => {}}>
+          <List.Item prefix={<SearchOutline />} onClick={() => {
+            history.push({pathname: `/discover/search`})
+          }}>
             搜一搜
           </List.Item>
         </List>

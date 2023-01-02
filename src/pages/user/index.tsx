@@ -23,13 +23,21 @@ export default function Page() {
       <Space className='layout-scroll-content' direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)", paddingTop: 0 }}>
         <UserCard user={userInfo}></UserCard>
         <List>
-          <List.Item prefix={<CouponOutline />} onClick={() => {}}>
+          <List.Item prefix={<CouponOutline />} onClick={() => {
+            history.push({
+              pathname: `/user/service`
+            })
+          }}>
             服务
           </List.Item>
         </List>
 
         <List>
-          <List.Item prefix={<CompassOutline />} onClick={() => {}}>
+          <List.Item prefix={<CompassOutline />} onClick={() => {
+            history.push({
+              pathname: `/user/collection`
+            })
+          }}>
             收藏
           </List.Item>
           <List.Item prefix={<PictureOutline />} onClick={() => {}}>
