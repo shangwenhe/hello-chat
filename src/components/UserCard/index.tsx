@@ -18,12 +18,12 @@ const UserCard:FC<IUserCard> = (props: IUserCard ) => {
         description={
           <>
             昵称: 华北<br/>
-            微信号: XXXPXPPPX<br/>
+            微信号: 腿毛怪叔叔<br/>
             地区: 河北 廊坊
           </>
         }
       >
-        Novalee Spicer xsxsxsx
+        醉榻天下
       </List.Item>
     </List>
   </>
