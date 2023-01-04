@@ -1,6 +1,13 @@
-import { APP_ENV, EEnv } from '../.umirc';
-import type { RequestConfig } from 'umi';
+import type { RequestConfig } from '@umijs/max';
 import { ResponseLayout } from './api/request.config';
+
+
+type APP_ENV = 'dev' | 'test' | 'prod';
+enum EEnv {
+  DEV = 'dev',
+  TEST = 'test',
+  PROD = 'prod',
+}
 
 const EBaseURL = {
   [EEnv.DEV]  : '',
@@ -8,7 +15,7 @@ const EBaseURL = {
   [EEnv.PROD] : 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat',
 }
 
-const baseURL = EBaseURL[process.env.APP_ENV as APP_ENV];
+const baseURL = EBaseURL[process.env.APP_ENV as APP_ENV || 'prod'];
 
 console.log("process.env.APP_ENV", process.env.APP_ENV);
 

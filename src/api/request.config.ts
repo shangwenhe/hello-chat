@@ -1,6 +1,6 @@
 
 
-import { request } from 'umi';
+import { request } from '@umijs/max';
 export interface ResponseLayout<T> {
   msg: string;
   code: number;

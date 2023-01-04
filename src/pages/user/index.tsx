@@ -12,7 +12,7 @@ import {
   PictureOutline
 } from 'antd-mobile-icons'
 import UserCard from '@/components/UserCard';
-import { history, useModel } from 'umi';
+import { history, useModel } from '@umijs/max';
 
 export default function Page() {
 

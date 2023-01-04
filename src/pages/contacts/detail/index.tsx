@@ -9,7 +9,7 @@ import {
 } from 'antd-mobile-icons'
 import { NavBar, Space, List } from 'antd-mobile';
 import { MoreOutline } from 'antd-mobile-icons'
-import { history, useModel } from 'umi';
+import { history, useModel } from '@umijs/max';
 import './index.less';
 import UserCard from '@/components/UserCard';
 import MediaSheet from '@/components/MediaSheet';

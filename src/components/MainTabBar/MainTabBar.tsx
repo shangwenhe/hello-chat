@@ -9,7 +9,7 @@ import {
 } from 'antd-mobile-icons'
 
 import style from './index.less'
-import { history, useLocation } from 'umi'
+import { history, useLocation } from '@umijs/max'
 
 export default function MainTabBar() {
 

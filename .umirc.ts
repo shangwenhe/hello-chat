@@ -1,4 +1,4 @@
-import { defineConfig } from "umi";
+import { defineConfig } from "@umijs/max";
 
 export type APP_ENV = 'dev' | 'test' | 'prod';
 export enum EEnv {
@@ -16,13 +16,11 @@ const HistoryType: IHistoryType  = {
   [EEnv.PROD]: 'hash',
 }
 
-const historyType = HistoryType[process.env.APP_ENV as APP_ENV] ;
-
-console.log('historyType', historyType)
+const historyType = HistoryType[process.env.APP_ENV as APP_ENV || 'prod'];
 
 export default defineConfig({
   history: {
-    type: historyType
+    type: 'browser'
   },
   // publicPath: '/chat/',
   npmClient: 'npm',

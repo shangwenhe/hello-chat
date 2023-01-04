@@ -1,5 +1,5 @@
 import MainTabBar from '@/components/MainTabBar';
-import { Outlet } from 'umi';
+import { Outlet } from '@umijs/max';
 export default () => {
   return (
     <>
