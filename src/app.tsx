@@ -1,12 +1,17 @@
+import { APP_ENV, EEnv } from '../.umirc';
 import type { RequestConfig } from 'umi';
 import { ResponseLayout } from './api/request.config';
 
-const baseURL =
-  process.env.APP_ENV === 'dev'
-    ? ''
-    : 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat';
+const EBaseURL = {
+  [EEnv.DEV]  : '',
+  [EEnv.TEST] : '',
+  [EEnv.PROD] : 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat',
+}
 
-console.log("process.env.APP_ENV", process.env.APP_ENV)
+const baseURL = EBaseURL[process.env.APP_ENV as APP_ENV];
+
+console.log("process.env.APP_ENV", process.env.APP_ENV);
+
 export const request: RequestConfig = {
   timeout: 2000,
   baseURL,

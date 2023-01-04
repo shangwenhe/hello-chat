@@ -1,4 +1,7 @@
 import 'umi/typings';
-declare interface Window {
-  StatusBar: any;
+
+declare global {
+  namespace StatusBar {
+    function show (): void
+  }
 }

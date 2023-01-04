@@ -1983,6 +1983,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/cordova@^0.0.34":
+  version "0.0.34"
+  resolved "https://registry.npmmirror.com/@types/cordova/-/cordova-0.0.34.tgz#ea7addf74ecec3d7629827a0c39e2c9addc73d04"
+  integrity sha512-rkiiTuf/z2wTd4RxFOb+clE7PF4AEJU0hsczbUdkHHBtkUmpWQpEddynNfJYKYtZFJKbq4F+brfekt1kx85IZA==
+
 "@types/glob@^7.1.1":
   version "7.2.0"
   resolved "https://registry.npmmirror.com/@types/glob/-/glob-7.2.0.tgz"

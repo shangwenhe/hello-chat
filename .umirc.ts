@@ -1,6 +1,22 @@
 import { defineConfig } from "umi";
 
-const historyType = process.env.APP_ENV === 'dev' ?  'browser' : 'hash';
+export type APP_ENV = 'dev' | 'test' | 'prod';
+export enum EEnv {
+  DEV = 'dev',
+  TEST = 'test',
+  PROD = 'prod',
+}
+
+interface IHistoryType {
+  [key: string]:  "browser" | "hash" | "memory";
+}
+const HistoryType: IHistoryType  = {
+  [EEnv.DEV]: 'browser',
+  [EEnv.TEST]: 'browser' ,
+  [EEnv.PROD]: 'hash',
+}
+
+const historyType = HistoryType[process.env.APP_ENV as APP_ENV] ;
 
 console.log('historyType', historyType)
 
@@ -15,6 +31,10 @@ export default defineConfig({
   define: {
     'process.env': process.env,
   },
+  scripts: [{
+    src: 'cordova.js',
+    defer: false
+  }],
   routes: [
     { path: '/', redirect: '/user' },
     {

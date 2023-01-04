@@ -13,6 +13,7 @@
     "antd-mobile": "^5.27.0"
   },
   "devDependencies": {
+    "@types/cordova": "^0.0.34",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@umijs/plugins": "^4.0.41",
