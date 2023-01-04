@@ -76,7 +76,6 @@ export default defineConfig({
           path: '/user/collection',
           component: '@/pages/user/collection'
         },
-
         {
           path: '/discover/findout',
           component: '@/pages/discover/findout',
