@@ -3,20 +3,20 @@ import type { RequestConfig } from '@umijs/max';
 import { ResponseLayout } from './api/request.config';
 
 type APP_ENV = 'dev' | 'test' | 'prod';
+
 enum EEnv {
   DEV = 'dev',
   TEST = 'test',
   PROD = 'prod',
 }
+
 const EBaseURL = {
   [EEnv.DEV]  : '',
   [EEnv.TEST] : '',
   [EEnv.PROD] : 'https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat',
 }
 
-const baseURL = EBaseURL[process.env.APP_ENV as APP_ENV];
-
-console.log("process.env.APP_ENV", process.env.APP_ENV);
+const baseURL = EBaseURL[process.env.APP_ENV  as APP_ENV || 'prod'];
 
 export const request: RequestConfig = {
   timeout: 2000,

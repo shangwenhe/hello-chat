@@ -1,4 +1,5 @@
 import { defineConfig } from "umi";
+import { VitePWA } from 'vite-plugin-pwa'
 
 export type APP_ENV = 'dev' | 'test' | 'prod';
 export enum EEnv {
@@ -16,11 +17,16 @@ const HistoryType: IHistoryType  = {
   [EEnv.PROD]: 'hash',
 }
 
-const historyType = HistoryType[process.env.APP_ENV as APP_ENV];
+const historyType = HistoryType[ process.env.APP_ENV || 'prod' as APP_ENV];
 
 console.log('historyType', historyType);
 
 export default defineConfig({
+  vite: {
+    plugins: [
+      VitePWA()
+    ]
+  },
   history: {
     type: historyType
   },
