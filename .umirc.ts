@@ -1,4 +1,5 @@
 import { defineConfig } from "@umijs/max";
+import { VitePWA } from 'vite-plugin-pwa'
 
 export type APP_ENV = 'dev' | 'test' | 'prod';
 export enum EEnv {
@@ -19,10 +20,14 @@ const HistoryType: IHistoryType  = {
 const historyType = HistoryType[process.env.APP_ENV as APP_ENV || 'prod'];
 
 export default defineConfig({
+  vite: {
+    plugins: [
+      VitePWA()
+    ]
+  },
   history: {
     type: historyType
   },
-  // publicPath: '/chat/',
   npmClient: 'npm',
   model: {},
   request: {},

@@ -1,7 +1,5 @@
 import type { RequestConfig } from '@umijs/max';
 import { ResponseLayout } from './api/request.config';
-
-
 type APP_ENV = 'dev' | 'test' | 'prod';
 enum EEnv {
   DEV = 'dev',
@@ -16,8 +14,6 @@ const EBaseURL = {
 }
 
 const baseURL = EBaseURL[process.env.APP_ENV as APP_ENV || 'prod'];
-
-console.log("process.env.APP_ENV", process.env.APP_ENV);
 
 export const request: RequestConfig = {
   timeout: 2000,

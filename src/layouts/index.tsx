@@ -1,4 +1,3 @@
-
 import { Outlet } from '@umijs/max';
 import './index.less'
 
