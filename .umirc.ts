@@ -20,7 +20,7 @@ const historyType = HistoryType[process.env.APP_ENV as APP_ENV || 'prod'];
 
 export default defineConfig({
   history: {
-    type: 'browser'
+    type: historyType
   },
   // publicPath: '/chat/',
   npmClient: 'npm',
@@ -32,6 +32,11 @@ export default defineConfig({
   scripts: [{
     src: 'cordova.js',
     defer: false
+  }, {
+    src: 'https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js',
+  }, {
+    content: `var vConsole = new VConsole()`,
+    charset: 'utf-8'
   }],
   routes: [
     { path: '/', redirect: '/user' },
