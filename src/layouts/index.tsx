@@ -1,5 +1,5 @@
 import { show } from 'antd-mobile/es/components/dialog/show';
-import { Outlet } from 'umi';
+import { Outlet } from '@umijs/max';
 import './index.less'
 
 export default () => {

@@ -16,15 +16,14 @@ const HistoryType: IHistoryType  = {
   [EEnv.PROD]: 'hash',
 }
 
-const historyType = HistoryType[process.env.APP_ENV as APP_ENV] ;
+const historyType = HistoryType[process.env.APP_ENV as APP_ENV];
 
-console.log('historyType', historyType)
+console.log('historyType', historyType);
 
 export default defineConfig({
   history: {
     type: historyType
   },
-  // publicPath: '/chat/',
   npmClient: 'npm',
   model: {},
   request: {},

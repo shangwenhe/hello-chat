@@ -1,7 +1,13 @@
-import { APP_ENV, EEnv } from '../.umirc';
-import type { RequestConfig } from 'umi';
+
+import type { RequestConfig } from '@umijs/max';
 import { ResponseLayout } from './api/request.config';
 
+type APP_ENV = 'dev' | 'test' | 'prod';
+enum EEnv {
+  DEV = 'dev',
+  TEST = 'test',
+  PROD = 'prod',
+}
 const EBaseURL = {
   [EEnv.DEV]  : '',
   [EEnv.TEST] : '',

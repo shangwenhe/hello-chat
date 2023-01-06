@@ -5,7 +5,7 @@ import { IUserChat } from '@/interface/user';
 import { getChart } from '@/api/user';
 import { Form, NavBar, Space } from 'antd-mobile';
 import { MoreOutline } from 'antd-mobile-icons'
-import { history, useModel } from 'umi';
+import { history, useModel } from '@umijs/max';
 
 
 export default function Page() {

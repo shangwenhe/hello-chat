@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Image, List, NavBar, Space } from 'antd-mobile'
-import { history } from 'umi';
+import { history } from '@umijs/max';
 import NavBarMenu from '@/components/NavBarMenu';
 import { getWeChartList } from '@/api/chat';
 import { IChatInfo } from '@/interface/chat';
