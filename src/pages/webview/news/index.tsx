@@ -1,19 +1,7 @@
-import React, { useState } from 'react'
-import { Badge, TabBar } from 'antd-mobile'
-import styles from './index.less';
-import {
-  AppOutline,
-  MessageOutline,
-  MessageFill,
-  UnorderedListOutline,
-  UserOutline,
-} from 'antd-mobile-icons'
+import React from 'react'
 
 
 export default function Page() {
-
-
-  const [activeKey, setActiveKey] = useState('todo')
 
   return (
     <>

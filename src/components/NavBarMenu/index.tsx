@@ -10,7 +10,7 @@ import {
   AntOutline
 } from 'antd-mobile-icons'
 import { Action } from "antd-mobile/es/components/popover";
-import styles from './index.less'
+import styles from '@/components/NavBarMenu/index.less'
 import { history } from "@umijs/max";
 interface NavBarMenuProps {
   title: string;

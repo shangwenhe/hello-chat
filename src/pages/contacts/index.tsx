@@ -1,5 +1,5 @@
 import React from 'react'
-import { IndexBar, List, Image, NavBar } from 'antd-mobile'
+import { IndexBar, List, Image } from 'antd-mobile'
 import { history } from '@umijs/max'
 import NavBarMenu from '@/components/NavBarMenu'
 

@@ -4,7 +4,7 @@ import { history } from '@umijs/max';
 import NavBarMenu from '@/components/NavBarMenu';
 import { getWeChartList } from '@/api/chat';
 import { IChatInfo } from '@/interface/chat';
-import './index.less'
+import '@/pages/wechat/index.less'
 import { BellMuteOutline  } from 'antd-mobile-icons'
 
 export default () => {

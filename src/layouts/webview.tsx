@@ -1,5 +1,5 @@
 
-import { Link, Outlet } from '@umijs/max';
+import { Outlet } from '@umijs/max';
 
 export default function Layout() {
   return (

@@ -10,7 +10,7 @@ import {
 import { NavBar, Space, List } from 'antd-mobile';
 import { MoreOutline } from 'antd-mobile-icons'
 import { history, useModel } from '@umijs/max';
-import './index.less';
+import '@/pages/contacts/detail/index.less';
 import UserCard from '@/components/UserCard';
 import MediaSheet from '@/components/MediaSheet';
 

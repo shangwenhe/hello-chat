@@ -1,6 +1,5 @@
 import React from 'react'
 import { Avatar, Badge, List, Space } from 'antd-mobile'
-import './index.less';
 import {
   ScanningOutline,
   SearchOutline,

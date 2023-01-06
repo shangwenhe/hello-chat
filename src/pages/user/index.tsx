@@ -1,6 +1,5 @@
 import React from 'react'
 import { List, Space } from 'antd-mobile'
-import './index.less';
 import {
   CouponOutline,
   CompassOutline,
