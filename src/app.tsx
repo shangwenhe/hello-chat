@@ -1,5 +1,6 @@
 import type { RequestConfig } from '@umijs/max';
 import { ResponseLayout } from './api/request.config';
+import 'antd-mobile/es/global'
 type APP_ENV = 'dev' | 'test' | 'prod';
 enum EEnv {
   DEV = 'dev',

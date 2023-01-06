@@ -3,7 +3,6 @@ import { Badge, TabBar } from 'antd-mobile'
 import {
   CompassOutline,
   MessageOutline,
-  MessageFill,
   UnorderedListOutline,
   UserSetOutline,
 } from 'antd-mobile-icons'

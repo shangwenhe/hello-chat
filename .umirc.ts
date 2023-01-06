@@ -22,7 +22,12 @@ const historyType = HistoryType[process.env.APP_ENV as APP_ENV || 'prod'];
 export default defineConfig({
   vite: {
     plugins: [
-      VitePWA()
+      VitePWA({
+        mode: 'production',
+        workbox: {
+          cleanupOutdatedCaches: false
+        }
+      })
     ]
   },
   history: {
