@@ -6,6 +6,7 @@ import { getWeChartList } from '@/api/chat';
 import { IChatInfo } from '@/interface/chat';
 import './index.less'
 import { BellMuteOutline  } from 'antd-mobile-icons'
+import FixedTopBar from '@/components/FixedTopBar';
 
 export default () => {
 
@@ -36,7 +37,9 @@ export default () => {
 
   return (
     <>
-      <NavBarMenu title='消息'></NavBarMenu>
+      <FixedTopBar>
+        <NavBarMenu title='消息'></NavBarMenu>
+      </FixedTopBar>
       <List className='layout-scroll-content'>
         {users.map((user, index: number) => (
           <List.Item

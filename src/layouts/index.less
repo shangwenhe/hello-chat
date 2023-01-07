@@ -1,8 +1,8 @@
 body {
   padding: 0;
   margin: 0;
-  --status-bar-height: 20px;
-  --top-fixed-bar: 55px;
+  --status-bar-height: 0px;
+  --top-fixed-height: 55px;
   --bottom-fixed-bar: 55px;
   --fixed-z-index: 1000;
 }
@@ -14,7 +14,7 @@ body, #root{
 }
 
 .layout-scroll-content {
-  min-height: calc(100vh - var(--top-fixed-bar) - var(--bottom-fixed-bar));
-  padding-top: var(--top-fixed-bar);
+  min-height: calc(100vh - var(--top-fixed-height) - var(--status-bar-height) - var(--bottom-fixed-bar));
+  padding-top: calc( var(--top-fixed-height) + var(--status-bar-height) );
   padding-bottom: var(--bottom-fixed-bar);
 }

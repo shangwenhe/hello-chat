@@ -6,6 +6,7 @@ import { getChart } from '@/api/user';
 import { Form, NavBar, Space } from 'antd-mobile';
 import { MoreOutline } from 'antd-mobile-icons'
 import { history, useModel } from '@umijs/max';
+import FixedTopBar from '@/components/FixedTopBar';
 
 
 export default function Page() {
@@ -74,9 +75,11 @@ export default function Page() {
 
   return (
     <>
-      <NavBar className='wechat-nav-bar' style={{'--height': 'var(--top-fixed-bar)', 'backgroundColor': 'var(--adm-color-box)'}} right={right} onBack={back}>
-        {currentUser.name}
-      </NavBar>
+      <FixedTopBar>
+        <NavBar style={{'--height': 'var(--top-fixed-height)'}} right={right} onBack={back}>
+          {currentUser.name}
+        </NavBar>
+      </FixedTopBar>
       <ChatList currentUser={currentUser} userChat={userChat}  ></ChatList>
       <Form form={form} onFinish={onFinish} initialValues={{content: ''}}>
         <IMInput form={form}></IMInput>

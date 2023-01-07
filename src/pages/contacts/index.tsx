@@ -2,6 +2,7 @@ import React from 'react'
 import { IndexBar, List, Image } from 'antd-mobile'
 import { history } from '@umijs/max'
 import NavBarMenu from '@/components/NavBarMenu'
+import FixedTopBar from '@/components/FixedTopBar'
 
 const getRandomList = (min: number, max: number): string[] => {
   return new Array(Math.floor(Math.random() * (max - min) + min)).fill('')
@@ -37,8 +38,10 @@ export default () => {
     history.push(`/contacts/${id}`);
   }
   return (<>
-    <NavBarMenu title='通讯录'></NavBarMenu>
-    <div className='layout-scroll-content' style={{ height: "calc(100vh - 55px - 55px)" }}>
+    <FixedTopBar>
+      <NavBarMenu title='通讯录'></NavBarMenu>
+    </FixedTopBar>
+    <div className='layout-scroll-content' style={{ height: "calc(100vh - var(--top-fixed-height) - var(--status-bar-height) - var(--bottom-fixed-bar))" }}>
       <IndexBar>
         {groups.map(group => {
           const { title, items } = group

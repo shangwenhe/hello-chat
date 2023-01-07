@@ -23,8 +23,6 @@ const NavBarBack:FC<NavBarBackProps> = ({title}) => {
 
   return <>
     <NavBar
-      className={styles.navbar}
-      style={{'--height': 'var(--top-fixed-bar)'}}
       onBack={()=>{
         history.back();
       }}

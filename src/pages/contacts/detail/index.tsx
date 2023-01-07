@@ -13,6 +13,7 @@ import { history, useModel } from '@umijs/max';
 import './index.less';
 import UserCard from '@/components/UserCard';
 import MediaSheet from '@/components/MediaSheet';
+import FixedTopBar from '@/components/FixedTopBar';
 
 
 export default function Page() {
@@ -36,10 +37,12 @@ export default function Page() {
 
   return (
     <>
-      <NavBar right={right} style={{'--height': 'var(--top-fixed-bar)'}} onBack={back}>
-        {userInfo.name}
-      </NavBar>
-      <Space direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
+      <FixedTopBar>
+        <NavBar right={right} style={{'--height': 'var(--top-fixed-height)'}} onBack={back}>
+          {userInfo.name}
+        </NavBar>
+      </FixedTopBar>
+      <Space className='layout-scroll-content' direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
         <UserCard user={userInfo}></UserCard>
         <List>
           <List.Item prefix={<PhonebookOutline/> } onClick={() => {}}>

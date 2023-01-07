@@ -10,14 +10,15 @@ import {
 } from 'antd-mobile-icons'
 import { history, useModel } from '@umijs/max';
 import NavBarMenu from '@/components/NavBarMenu';
+import FixedTopBar from '@/components/FixedTopBar';
 
 export default function Page() {
   const { userInfo } = useModel("user")
-
-
   return (
     <>
-      <NavBarMenu title='发现'></NavBarMenu>
+      <FixedTopBar>
+        <NavBarMenu title='发现'></NavBarMenu>
+      </FixedTopBar>
       <Space className='layout-scroll-content' direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
         <List>
           <List.Item

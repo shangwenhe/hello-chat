@@ -1,6 +1,7 @@
 import React from 'react'
 import { List, NavBar, Space } from 'antd-mobile'
 import { useModel } from '@umijs/max';
+import FixedTopBar from '@/components/FixedTopBar';
 
 export default function Page() {
   const { userInfo } = useModel("user")
@@ -10,13 +11,15 @@ export default function Page() {
   }
   return (
     <>
-      <NavBar style={{'--height': 'var(--top-fixed-bar)', 'backgroundColor': 'var(--adm-color-box)'}} onBack={back}>
-        {userInfo.name}设置
-      </NavBar>
+      <FixedTopBar>
+        <NavBar style={{'--height': 'var(--top-fixed-height)', 'backgroundColor': 'var(--adm-color-box)'}} onBack={back}>
+          {userInfo.name}设置
+        </NavBar>
+      </FixedTopBar>
       <Space
         className='layout-scroll-content'
         direction='vertical' block
-        style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)", 'paddingTop': 0 }}>
+        style={{ '--gap': '1em' }}>
         <List>
           <List.Item onClick={() => {}}>
             账号与安全

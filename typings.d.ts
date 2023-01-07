@@ -1,7 +1,7 @@
 import 'umi/typings';
-
-// declare global {
-//   namespace StatusBar {
-//     function show (): void
-//   }
-// }
+import 'cordova-plugin-statusbar'
+declare global {
+  namespace UserCoustom {
+    function show (): void
+  }
+}

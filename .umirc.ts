@@ -1,5 +1,4 @@
 import { defineConfig } from "@umijs/max";
-import { VitePWA } from 'vite-plugin-pwa'
 
 export type APP_ENV = 'dev' | 'test' | 'prod';
 export enum EEnv {
@@ -34,9 +33,10 @@ export default defineConfig({
     defer: false
   }, {
     src: 'https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js',
-  }, {
-    content: `var vConsole = new VConsole()`,
-    charset: 'utf-8'
+  // }, {
+  //   content: `var vConsole = new VConsole()`,
+  //   charset: 'utf-8',
+  //   type: 'text/javascript'
   }],
   routes: [
     { path: '/', redirect: '/user' },

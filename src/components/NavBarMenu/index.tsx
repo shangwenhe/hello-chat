@@ -48,7 +48,7 @@ const NavBarMenu:FC<NavBarMenuProps> = ({title}) => {
   )
 
   return <>
-    <NavBar className={styles.navbar} style={{'--height': 'var(--top-fixed-bar)'}} backArrow={false} right={right}>{title}</NavBar>
+    <NavBar className={styles.navbar} style={{'--height': 'var(--top-fixed-height)'}} backArrow={false} right={right}>{title}</NavBar>
     <Mask
       color='white'
       visible={visible}

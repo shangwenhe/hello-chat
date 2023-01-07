@@ -2,6 +2,7 @@ import React from 'react'
 import { Avatar, Button, List, NavBar, Space, Switch } from 'antd-mobile'
 import { AddOutline } from 'antd-mobile-icons'
 import { useModel } from '@umijs/max';
+import FixedTopBar from '@/components/FixedTopBar';
 
 export default function Page() {
   const { userInfo } = useModel("user")
@@ -11,10 +12,12 @@ export default function Page() {
   }
   return (
     <>
-      <NavBar style={{'--height': 'var(--top-fixed-bar)', 'backgroundColor': 'var(--adm-color-box)'}} onBack={back}>
-        {userInfo.name}设置
-      </NavBar>
-      <Space direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
+      <FixedTopBar>
+        <NavBar style={{'--height': 'var(--top-fixed-height)', 'backgroundColor': 'var(--adm-color-box)'}} onBack={back}>
+          {userInfo.name}设置
+        </NavBar>
+      </FixedTopBar>
+      <Space className='layout-scroll-content' direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
         <List>
           <List.Item arrow={false}>
             <Space block wrap>

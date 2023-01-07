@@ -6,3 +6,9 @@ declare module '*.less' {
   const classes: CSSModuleClasses
   export default classes
 }
+
+declare interface CordovaPlugins {
+  StatusBarHeight?: {
+    getValue: ( successFn: (value: number) => void, FailFn: (value: string) => void ) => void;
+  }
+}
