@@ -1,4 +1,5 @@
 import type { RequestConfig } from '@umijs/max';
+import React from 'react';
 import { ResponseLayout } from './api/request.config';
 
 type APP_ENV = 'dev' | 'test' | 'prod';
@@ -49,3 +50,14 @@ export const request: RequestConfig = {
   requestInterceptors: [],
   responseInterceptors: []
 };
+
+// document.addEventListener('deviceready', () => {
+//   console.log('event::deviceready')
+// })
+// document.addEventListener('load', () => {
+//   console.log('event::load')
+// })
+
+// export function rootContainer(container: any) {
+//   return container;
+// }

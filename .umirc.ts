@@ -20,14 +20,6 @@ const HistoryType: IHistoryType  = {
 const historyType = HistoryType[process.env.APP_ENV as APP_ENV || 'prod'];
 
 export default defineConfig({
-  vite: {
-    plugins: [
-      VitePWA({
-        mode: 'production',
-        injectRegister: 'inline',
-      })
-    ]
-  },
   history: {
     type: historyType
   },
