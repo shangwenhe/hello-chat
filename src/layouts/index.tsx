@@ -1,5 +1,5 @@
 import { Outlet } from '@umijs/max';
-import '@/layouts/index.less'
+import './index.less'
 
 export default () => {
   // window.addEventListener('statusTap', function() {

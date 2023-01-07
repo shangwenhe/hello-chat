@@ -24,9 +24,7 @@ export default defineConfig({
     plugins: [
       VitePWA({
         mode: 'production',
-        workbox: {
-          cleanupOutdatedCaches: false
-        }
+        injectRegister: 'inline',
       })
     ]
   },

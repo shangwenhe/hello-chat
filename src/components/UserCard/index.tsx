@@ -1,7 +1,7 @@
 import { IUserInfo } from "@/interface/user"
 import { Avatar, List } from "antd-mobile"
 import { FC, useState } from "react"
-import '@/components/UserCard/index.less'
+import './index.less'
 
 
 interface IUserCard  {

@@ -1,7 +1,7 @@
 
 import { Input, Button, Form } from 'antd-mobile'
-import '@/pages/wechat/information/index.less'
-import styles from '@/pages/wechat/information/index.less'
+import './index.less'
+import styles from './index.less'
 import { AudioOutline, AddCircleOutline, SmileOutline  } from 'antd-mobile-icons'
 import { useEffect, useState } from 'react'
 import { FormInstance } from 'antd-mobile/es/components/form'
