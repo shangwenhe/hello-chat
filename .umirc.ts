@@ -39,7 +39,7 @@ export default defineConfig({
   //   type: 'text/javascript'
   }],
   routes: [
-    { path: '/', redirect: '/user' },
+    { path: '/', redirect: '/discover' },
     {
       path: '/',
       component: '@/layouts/main',
