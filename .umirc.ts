@@ -31,8 +31,8 @@ export default defineConfig({
   scripts: [{
     src: 'cordova.js',
     defer: false
-  }, {
-    src: 'https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js',
+  // }, {
+  //   src: 'https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js',
   // }, {
   //   content: `var vConsole = new VConsole()`,
   //   charset: 'utf-8',
@@ -110,6 +110,10 @@ export default defineConfig({
         {
           path: '/discover/search',
           component: '@/pages/discover/search',
+        },
+        {
+          path: '/discover/friend',
+          component: '@/pages/discover/friend',
         },
       ]
     },

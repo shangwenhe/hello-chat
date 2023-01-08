@@ -8,13 +8,14 @@ import {
 } from 'antd-mobile-icons'
 
 import style from './index.less'
-import { history, useLocation } from '@umijs/max'
+import { history, useLocation, useModel } from '@umijs/max'
 
 export default function MainTabBar() {
 
   const { pathname } = useLocation();
 
-  const [activeKey, setActiveKey] = useState(pathname)
+  const [activeKey, setActiveKey] = useState(pathname);
+  const { badges } = useModel('barbadge');
 
   useEffect(()=>{
     history.push(activeKey);
@@ -25,25 +26,26 @@ export default function MainTabBar() {
       key: '/wechat',
       title: '消息',
       icon: <MessageOutline />,
-      badge: '99+',
+      badge: badges.wechat,
     },
 
     {
       key: '/contacts',
       title: '通讯录',
       icon: <UnorderedListOutline />,
-      badge: '9',
+      badge: badges.contacts,
     },
     {
       key: '/discover',
       title: '发现',
       icon: <CompassOutline />,
-      badge: Badge.dot,
+      badge: badges.discover,
     },
     {
       key: '/user',
       title: '个人中心',
       icon: <UserSetOutline />,
+      badge: badges.user,
     },
   ]
 

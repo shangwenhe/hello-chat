@@ -11,9 +11,10 @@ interface IUserCard  {
 const UserCard:FC<IUserCard> = (props: IUserCard ) => {
   const [ avatar, setAvatar] = useState<string>('https://www-huaguan.oss-cn-hangzhou.aliyuncs.com/chat/avatar/photo-1548532928-b34e3be62fc6.jpeg')
   return <>
-    <List>
+    <List style={{ '--border-top': 'none'}}>
       <List.Item
         className='avatar-item'
+
         prefix={<Avatar src={ avatar } style={{ '--size': '64px' }}   />}
         description={
           <>

@@ -4,7 +4,7 @@ import {
   ScanningOutline,
   SearchOutline,
   AppstoreOutline,
-  EyeOutline,
+  TravelOutline,
   MovieOutline,
   PictureOutline
 } from 'antd-mobile-icons'
@@ -28,7 +28,11 @@ export default function Page() {
                 <Avatar src={userInfo.avatar} style={{ '--size': '32px' }}  />
               </Badge>
             }
-            onClick={() => {}}>
+            onClick={() => {
+              history.push({
+                pathname: `/discover/friend`
+              })
+            }}>
             朋友圈
           </List.Item>
         </List>
@@ -44,7 +48,7 @@ export default function Page() {
           }}>
             视频号
           </List.Item>
-          <List.Item prefix={<EyeOutline />} onClick={() => {
+          <List.Item prefix={<TravelOutline />} onClick={() => {
             history.push({pathname: `/discover/findout`})
           }}>
             看一看

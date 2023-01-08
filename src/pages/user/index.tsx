@@ -19,8 +19,10 @@ export default function Page() {
 
   return (
     <>
-      <Space className='layout-scroll-content' direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)", paddingTop: 'var(--status-bar-height)' }}>
-        <UserCard user={userInfo}></UserCard>
+      <Space className='layout-scroll-content' direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)", paddingTop: '0px' }}>
+        <div style={{ paddingTop: 'var(--status-bar-height)', backgroundColor: '#ffffff'}} >
+          <UserCard user={userInfo}></UserCard>
+        </div>
         <List>
           <List.Item prefix={<CouponOutline />} onClick={() => {
             history.push({
@@ -39,7 +41,11 @@ export default function Page() {
           }}>
             收藏
           </List.Item>
-          <List.Item prefix={<PictureOutline />} onClick={() => {}}>
+          <List.Item prefix={<PictureOutline />} onClick={() => {
+            history.push({
+              pathname: `/discover/friend`
+            })
+          }}>
             朋友圈
           </List.Item>
           <List.Item prefix={<MovieOutline />} onClick={() => {}}>

@@ -8,11 +8,12 @@ export default () => {
     // StatusBar.show();
     StatusBarHeight?.getValue(
       function(value) {
-        const pdr = window.devicePixelRatio; // 获取设备独立像素比
-        const px = value * pdr;
-        const body = document.querySelector('body');
-        body?.style.setProperty('height', `${px}px`, 'important');
-        console.log('event:: deviceready StatusBarHeight', px);
+        const height = value - 5;
+        if (height > 0){
+          const body = document.querySelector('body');
+          body?.style.setProperty('--status-bar-height', `${height}px`, 'important');
+          console.log('event:: deviceready StatusBarHeight', height);
+        }
       },
       function(error) {
           console.log(error);
