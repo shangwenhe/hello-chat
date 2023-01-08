@@ -1,9 +1,10 @@
 
 import FixedTopBar from "@/components/FixedTopBar";
 import NavBarBack from "@/components/NavBarBack";
-import { Card, List, Popup, SearchBar, Space } from "antd-mobile";
+import { Card, Empty, List, Popup, SearchBar, Space } from "antd-mobile";
 import { useEffect, useRef, useState } from "react";
 import { ILocalPoint, IPointInfo, ISearchResult } from "./interface";
+import { DownOutline, UpOutline } from 'antd-mobile-icons'
 
 const ak = 'GGU78ARpu8VGeeGKerdhk5pd';
 
@@ -104,7 +105,7 @@ const DiscoverFindout = () => {
       bodyStyle={{
         borderTopLeftRadius: '8px',
         borderTopRightRadius: '8px',
-        height: showPopup ? '80vh' : '10vh',
+        height: showPopup ? '85vh' : '15vh',
         overflow: 'scroll',
         transition: 'height 500ms ease 0s'
        }}
@@ -114,27 +115,41 @@ const DiscoverFindout = () => {
     >
       <Card>
         <Space direction='vertical' style={{ '--gap': '12px' }} block>
+          <Space justify='center' block>
+            { showPopup ?  <DownOutline onClick={()=>{
+              setShowPopup(false)
+            }} /> : <UpOutline onClick={()=>{
+              setShowPopup(true)
+            }} /> }
+          </Space>
           <SearchBar placeholder='请填写地址' onSearch={(value: string)=>{
             setKey(value)
           }}
           onClear={()=>{
             setSearchList([])
           }}
+          onFocus={()=>{
+            setShowPopup(true)
+          }}
           onBlur={(value: any)=>{
             console.log(value)
             setShowPopup(true)
           }} />
-          <List>
-            { searchList?.map((item: IPointInfo)=>(
-              <List.Item key={item.uid} description={item.address} onClick={()=>{
-                setLocalPoint(item.point)
-                window.localStorage.setItem('localPoint', JSON.stringify(item.point))
-                setShowPopup(false)
-              }}>
-                {item.title}
-              </List.Item>
-            )) }
-          </List>
+
+          { !searchList ||  searchList?.length === 0 ? <Empty description='暂无数据' /> :
+            <List>
+              { searchList?.map((item: IPointInfo)=>(
+                <List.Item key={item.uid} description={item.address} onClick={()=>{
+                  setLocalPoint(item.point)
+                  window.localStorage.setItem('localPoint', JSON.stringify(item.point))
+                  setShowPopup(false)
+                }}>
+                  {item.title}
+                </List.Item>
+              ))}
+
+            </List>
+          }
         </Space>
 
       </Card>
