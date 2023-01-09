@@ -3,7 +3,7 @@ import FixedTopBar from "@/components/FixedTopBar";
 import NavBarBack from "@/components/NavBarBack";
 import './index.less';
 import { useModel } from "@umijs/max";
-import { Dialog, List, NavBar, SearchBar, Space } from "antd-mobile";
+import { Dialog, Empty, List, NavBar, SearchBar, Space } from "antd-mobile";
 import { DeleteOutline } from 'antd-mobile-icons'
 import { useEffect } from "react";
 
@@ -37,18 +37,23 @@ const DiscoverSearch = () => {
       <NavBarBack title='计划列表'></NavBarBack>
     </FixedTopBar>
     <Space className='layout-scroll-content' direction='vertical' block style={{ '--gap': '1em', backgroundColor: "var(--adm-color-box)" }}>
-      <SearchBar style={{'--background': '#fff'}} placeholder='请添加计划' onSearch={addTodo} />
+      <SearchBar style={{'--background': '#fff', margin: '0 8px'}} placeholder='请添加计划' onSearch={addTodo} />
+      { todoList && todoList.length > 0 ?
       <List header='计划列表' className="todo-list">
-        { todoList.map((item, index)=> (
-          <List.Item key={index}>
-          <NavBar
-            backArrow={item.name}
-            style={{'--height': '21px', 'padding': '0px' }}
-            right={<DeleteOutline onClick={()=>showCaptcha(index)} />} >
-          </NavBar>
-          </List.Item>
-        ))}
-      </List>
+      { todoList.map((item, index)=> (
+        <List.Item key={index}>
+        <NavBar
+          backArrow={item.name}
+          style={{'--height': '21px', 'padding': '0px' }}
+          right={<DeleteOutline onClick={()=>showCaptcha(index)} />} >
+        </NavBar>
+        <Space style={{'fontSize': '12px', color: 'var(--adm-color-weak)'}}>{ `${new Date(item.time).toLocaleDateString()} ${new Date(item.time).toLocaleTimeString()}` }</Space>
+        </List.Item>
+      ))}
+    </List>
+    : <Empty description='暂无数据' />
+     }
+
     </Space>
   </>
 }
