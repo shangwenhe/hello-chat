@@ -1,10 +1,8 @@
 import { ITodo } from "@/interface/todo";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default () => {
-
-
-  const [todoList, setTodoList] = useState<ITodo[]>([])
+  const [ todoList, setTodoList ] = useState<ITodo[]>([]);
 
   useEffect(()=>{
     const originTodo = localStorage.getItem('todo-list');
@@ -17,5 +15,10 @@ export default () => {
     localStorage.setItem('todo-list', JSON.stringify(todoList));
   }, [todoList])
 
-  return { todoList, setTodoList };
+  return {
+    todoList,
+    setTodoList: (list: ITodo[]) => {
+      setTodoList(list)
+    }
+  };
 };

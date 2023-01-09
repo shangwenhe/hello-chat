@@ -17,5 +17,10 @@ export default () => {
     })
   }, [])
 
-  return { userInfo, setUserInfo };
+  return {
+    userInfo,
+    setUserInfo: (info: IUserInfo) => {
+      setUserInfo(info)
+    }
+  };
 };
