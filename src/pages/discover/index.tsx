@@ -6,7 +6,8 @@ import {
   AppstoreOutline,
   TravelOutline,
   MovieOutline,
-  PictureOutline
+  PictureOutline,
+  FileOutline
 } from 'antd-mobile-icons'
 import { history, useModel } from '@umijs/max';
 import NavBarMenu from '@/components/NavBarMenu';
@@ -39,6 +40,11 @@ export default function Page() {
         <List>
           <List.Item prefix={<ScanningOutline />} onClick={() => {}}>
             扫一扫
+          </List.Item>
+          <List.Item prefix={<FileOutline />} onClick={() => {
+            history.push({pathname: `/discover/todo`})
+          }}>
+            计划列表
           </List.Item>
         </List>
 

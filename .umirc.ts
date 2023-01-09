@@ -115,6 +115,10 @@ export default defineConfig({
           path: '/discover/friend',
           component: '@/pages/discover/friend',
         },
+        {
+          path: '/discover/todo',
+          component: '@/pages/discover/todo',
+        },
       ]
     },
   ],
