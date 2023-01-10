@@ -3548,6 +3548,14 @@
   dependencies:
     "toggle-selection" "^1.0.6"
 
+"cordova-plugin-qrscanner@^3.0.1":
+  "integrity" "sha512-xrwOP3nD+VmRSiV0w7chZ5PLw2YwpI9vtLdeoGNYLLzmmjjYbyIof+x9vOEOgjtwrg9S61rukmOZhQAmkzaosA=="
+  "resolved" "https://registry.npmmirror.com/cordova-plugin-qrscanner/-/cordova-plugin-qrscanner-3.0.1.tgz"
+  "version" "3.0.1"
+  dependencies:
+    "qrcode-reader" "^1.0.4"
+    "webrtc-adapter" "^3.1.4"
+
 "cordova-plugin-statusbar@^3.0.0":
   "integrity" "sha512-nzkeWeyLA6+1FryzO0aeB6NS8MZ45gnBYeq2VZqfdNbddZEgtpI4XPYdBVxvm9NhcVoJ3tdA1OBnQD9JryoV0Q=="
   "resolved" "https://registry.npmmirror.com/cordova-plugin-statusbar/-/cordova-plugin-statusbar-3.0.0.tgz"
@@ -6817,6 +6825,11 @@
     "lodash" "^4.17.11"
     "single-spa" "^5.9.2"
 
+"qrcode-reader@^1.0.4":
+  "integrity" "sha512-rRjALGNh9zVqvweg1j5OKIQKNsw3bLC+7qwlnead5K/9cb1cEIAGkwikt/09U0K+2IDWGD9CC6SP7tHAjUeqvQ=="
+  "resolved" "https://registry.npmmirror.com/qrcode-reader/-/qrcode-reader-1.0.4.tgz"
+  "version" "1.0.4"
+
 "query-string@^6.13.6":
   "integrity" "sha512-XDxAeVmpfu1/6IjyT/gXHOl+S0vQ9owggJ30hhWKdHAsNPOcasn5o9BW0eejZqL2e4vMjhAxoW3jVHcD6mbcYw=="
   "resolved" "https://registry.npmmirror.com/query-string/-/query-string-6.14.1.tgz"
@@ -7905,6 +7918,11 @@
   dependencies:
     "compute-scroll-into-view" "^1.0.20"
 
+"sdp@^1.5.0":
+  "integrity" "sha512-9x0+fpJHW2bbqtIktmL+H9m+BswgurPVPhWrur4cCZPDWDSsdGYvRBaKhDXlnNCD1b/Xi8cOTG2u703CTQuwgg=="
+  "resolved" "https://registry.npmmirror.com/sdp/-/sdp-1.5.4.tgz"
+  "version" "1.5.4"
+
 "select-hose@^2.0.0":
   "integrity" "sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg=="
   "resolved" "https://registry.npmmirror.com/select-hose/-/select-hose-2.0.0.tgz"
@@ -8909,6 +8927,13 @@
     "terser-webpack-plugin" "^5.1.3"
     "watchpack" "^2.4.0"
     "webpack-sources" "^3.2.3"
+
+"webrtc-adapter@^3.1.4":
+  "integrity" "sha512-rz+SxzIEuHDbyTKhYffLmzSGX6+D/pOwoXKzS1pbR2PmMhBQTXCd7aYVhSoCcTHRcmcAR3OsFE8pbYFdy1qjbQ=="
+  "resolved" "https://registry.npmmirror.com/webrtc-adapter/-/webrtc-adapter-3.4.3.tgz"
+  "version" "3.4.3"
+  dependencies:
+    "sdp" "^1.5.0"
 
 "whatwg-fetch@>=0.10.0":
   "integrity" "sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA=="

@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@umijs/max": "^4.0.41",
-    "antd-mobile": "^5.27.0"
+    "antd-mobile": "^5.27.0",
+    "cordova-plugin-qrscanner": "^3.0.1"
   },
   "devDependencies": {
     "@types/cordova": "^0.0.34",
