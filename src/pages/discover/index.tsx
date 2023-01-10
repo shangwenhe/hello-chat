@@ -46,6 +46,11 @@ export default function Page() {
           }}>
             计划列表
           </List.Item>
+          <List.Item prefix={<TravelOutline />} onClick={() => {
+            history.push({pathname: `/discover/findout`})
+          }}>
+            看一看
+          </List.Item>
         </List>
 
         <List>
@@ -53,11 +58,6 @@ export default function Page() {
             history.push({pathname: `/discover/video`})
           }}>
             视频号
-          </List.Item>
-          <List.Item prefix={<TravelOutline />} onClick={() => {
-            history.push({pathname: `/discover/findout`})
-          }}>
-            看一看
           </List.Item>
           <List.Item prefix={<SearchOutline />} onClick={() => {
             history.push({pathname: `/discover/search`})

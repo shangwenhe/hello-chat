@@ -5,6 +5,7 @@ import { Card, Empty, List, Popup, SearchBar, Space } from "antd-mobile";
 import { useEffect, useRef, useState } from "react";
 import { ILocalPoint, IPointInfo, ISearchResult } from "./interface";
 import { DownOutline, UpOutline } from 'antd-mobile-icons'
+import './index.less'
 
 const ak = 'GGU78ARpu8VGeeGKerdhk5pd';
 
@@ -35,6 +36,7 @@ const loadBMap = (): Promise<string> => {
 const DiscoverFindout = () => {
   const mapPoint = useRef(null);
   const mapSearch = useRef(null);
+  const [ titleBarClassName, setTitleBarClassName ] = useState<string>('show');
   const [ map, setMap ] = useState<BMapGL.Map>();
   const [ local, setLocal ] = useState<BMapGL.LocalSearch>();
   const [ key, setKey ] = useState<string>();
@@ -50,6 +52,14 @@ const DiscoverFindout = () => {
       lat: 39.95127
     }
   });
+  useEffect(()=>{
+    if(showPopup){
+      setTitleBarClassName('findout-title findout-map-hiddend')
+    }else{
+      setTitleBarClassName('findout-title findout-map-show')
+    }
+
+  }, [showPopup])
 
   // 初始化 BmapGL
   useEffect(()=>{
@@ -93,7 +103,7 @@ const DiscoverFindout = () => {
   }, [])
 
   return <>
-    <FixedTopBar>
+    <FixedTopBar className={titleBarClassName}>
       <NavBarBack title='看一看'></NavBarBack>
     </FixedTopBar>
     <div className='layout-scroll-content' ref={mapPoint}></div>
