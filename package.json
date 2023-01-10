@@ -10,14 +10,14 @@
   },
   "dependencies": {
     "@umijs/max": "^4.0.41",
-    "antd-mobile": "^5.27.0",
-    "cordova-plugin-qrscanner": "^3.0.1"
+    "antd-mobile": "^5.27.0"
   },
   "devDependencies": {
     "@types/cordova": "^0.0.34",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@umijs/plugins": "^4.0.41",
+    "cordova-plugin-qrscanner": "^3.0.1",
     "cordova-plugin-statusbar": "^3.0.0",
     "cross-env": "^7.0.3",
     "typescript": "^4.1.2"
