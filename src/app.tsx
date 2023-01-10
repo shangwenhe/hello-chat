@@ -49,3 +49,10 @@ export const request: RequestConfig = {
   requestInterceptors: [],
   responseInterceptors: []
 };
+
+
+export function render(renderClient: any) {
+  window.addEventListener('load', ()=> {
+    renderClient();
+  }, false);
+}
