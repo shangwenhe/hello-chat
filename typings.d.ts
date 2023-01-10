@@ -29,5 +29,23 @@ declare global {
     }
 
   }
+
+  namespace QRScanner {
+    function prepare(callback:(error: any, data: any)=>void): void;
+    function destroy(callback:(error: any, data: any)=>void): void;
+    function scan(callback:(error: any, data: any)=>void): void;
+    function cancelScan(callback:(error: any, data: any)=>void): void;
+    function show(callback:(error: any, data: any)=>void): void;
+    function hide(callback:(error: any, data: any)=>void): void;
+    function pausePreview(callback:(error: any, data: any)=>void): void;
+    function resumePreview(callback:(error: any, data: any)=>void): void;
+    function enableLight(callback:(error: any, data: any)=>void): void;
+    function disableLight(callback:(error: any, data: any)=>void): void;
+    function useCamera(callback:(error: any, data: any)=>void): void;
+    function useFrontCamera(callback:(error: any, data: any)=>void): void;
+    function useBackCamera(callback:(error: any, data: any)=>void): void;
+    function openSettings(callback:(error: any, data: any)=>void): void;
+    function getStatus(callback:(error: any, data: any)=>void): void;
+  }
 }
 

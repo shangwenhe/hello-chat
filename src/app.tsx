@@ -53,6 +53,21 @@ export const request: RequestConfig = {
 
 export function render(renderClient: any) {
   window.addEventListener('load', ()=> {
+    QRScanner.prepare((err, status)=>{
+      if (err) {
+        console.error(err)
+      }
+      if (status.authorized) {
+
+      } else if (status.denied) {
+
+      } else {
+
+      }
+      console.log(err, status)
+    })
+
     renderClient();
   }, false);
+
 }
