@@ -38,7 +38,9 @@ export default function Page() {
           </List.Item>
         </List>
         <List>
-          <List.Item prefix={<ScanningOutline />} onClick={() => {}}>
+          <List.Item prefix={<ScanningOutline />} onClick={() => {
+            history.push({pathname: `/discover/scanner`})
+          }}>
             扫一扫
           </List.Item>
           <List.Item prefix={<FileOutline />} onClick={() => {

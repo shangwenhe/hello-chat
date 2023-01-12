@@ -35,12 +35,12 @@ export default defineConfig({
     {
       src: "cordova.js",
       defer: false,
-      // }, {
-      //   src: 'https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js',
-      // }, {
-      //   content: `var vConsole = new VConsole()`,
-      //   charset: 'utf-8',
-      //   type: 'text/javascript'
+    }, {
+      src: 'https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js',
+    }, {
+      content: `var vConsole = new VConsole()`,
+      charset: 'utf-8',
+      type: 'text/javascript'
     },
   ],
   routes: [
@@ -124,20 +124,21 @@ export default defineConfig({
           path: "/discover/video",
           component: "@/pages/discover/video",
         },
-
         {
           path: "/discover/search",
           component: "@/pages/discover/search",
         },
-
         {
           path: "/discover/friend",
           component: "@/pages/discover/friend",
         },
-
         {
           path: "/discover/todo",
           component: "@/pages/discover/todo",
+        },
+        {
+          path: "/discover/scanner",
+          component: "@/pages/discover/scanner",
         },
       ],
     },
