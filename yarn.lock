@@ -3548,6 +3548,11 @@
   dependencies:
     "toggle-selection" "^1.0.6"
 
+"cordova-plugin-geolocation@^4.1.0":
+  "integrity" "sha512-y5io/P10xGMxSn2KEqfv/fExK47eA1pmSonJdmDqDsaSADV9JpgdPx0mUSA08+5pzma/OS9R0LoODeDPx7Jvjg=="
+  "resolved" "https://registry.npmmirror.com/cordova-plugin-geolocation/-/cordova-plugin-geolocation-4.1.0.tgz"
+  "version" "4.1.0"
+
 "cordova-plugin-qrscanner@^3.0.1":
   "integrity" "sha512-xrwOP3nD+VmRSiV0w7chZ5PLw2YwpI9vtLdeoGNYLLzmmjjYbyIof+x9vOEOgjtwrg9S61rukmOZhQAmkzaosA=="
   "resolved" "https://registry.npmmirror.com/cordova-plugin-qrscanner/-/cordova-plugin-qrscanner-3.0.1.tgz"
@@ -3555,6 +3560,11 @@
   dependencies:
     "qrcode-reader" "^1.0.4"
     "webrtc-adapter" "^3.1.4"
+
+"cordova-plugin-splashscreen@^6.0.2":
+  "integrity" "sha512-7JiUfnInir+SCOEgTJ+5/cHF3UFl69jp6cAQfHtJaaQt9Pli8D8yTJjU0HGlJCvryvsVs4Xlc7/sEJM7vLJgvg=="
+  "resolved" "https://registry.npmmirror.com/cordova-plugin-splashscreen/-/cordova-plugin-splashscreen-6.0.2.tgz"
+  "version" "6.0.2"
 
 "cordova-plugin-statusbar@^3.0.0":
   "integrity" "sha512-nzkeWeyLA6+1FryzO0aeB6NS8MZ45gnBYeq2VZqfdNbddZEgtpI4XPYdBVxvm9NhcVoJ3tdA1OBnQD9JryoV0Q=="
