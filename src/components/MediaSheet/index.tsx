@@ -3,6 +3,7 @@ import type {
   Action,
 } from 'antd-mobile/es/components/action-sheet'
 import { ActionSheet, Toast } from 'antd-mobile';
+import { history } from "@umijs/max";
 
 
 interface MediaSheetProps {
@@ -18,7 +19,8 @@ const MediaSheet:FC<MediaSheetProps> = ({visible, onClose}) => {
 
   const onAction = (action: any) => {
     if (action.key === 'audio' || action.key === 'video') {
-      Toast.show(`点击了${action.text}`)
+      // Toast.show(`点击了${action.text}`)
+      history.push({pathname: `/wechat/call/1000`})
     }
   }
 

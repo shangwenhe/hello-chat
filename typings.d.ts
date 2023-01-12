@@ -48,9 +48,5 @@ declare global {
     function getStatus(callback:(error: any, data: any)=>void): void;
   }
 
-  namespace Camera {
-    function getPicture(callback:(error: any, data: any)=>void, options: any): void;
-    function cleanup(): void;
-  }
 }
 

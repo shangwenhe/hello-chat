@@ -89,6 +89,10 @@ export default defineConfig({
           path: "/wechat/:userId",
           component: "@/pages/wechat/information",
         },
+        {
+          path: "/wechat/call/:userId",
+          component: "@/pages/wechat/call",
+        },
 
         {
           path: "/contacts/:userId",

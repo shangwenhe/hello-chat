@@ -4,13 +4,9 @@
 }
 
 .im-input {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   box-sizing: border-box;
   padding: 10px 5px 5px;
-  background: var(--adm-color-box);
+
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -18,6 +14,16 @@
   align-items: flex-start;
   gap: 5px;
   z-index: 1010;
+}
+
+.im-input-warp {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: var(--fixed-z-index);
+  // background: var(--adm-color-box);
+  background-color: #f5f5ff;
 }
 
 .im-input-item {
@@ -34,6 +40,7 @@
   margin-top: -5px;
   background: var(--adm-color-background);
   border-radius: 5px;
+  border: 1px solid #b0b0b0;
 }
 
 .avatar {
@@ -83,4 +90,20 @@
   padding-bottom: 45px;
   overflow-x: hidden ;
   overflow-y: scroll ;
+}
+
+
+.wechat-grid {
+  padding: 10px 20px;
+  text-align: center;
+  .wechat-grid-item{
+    font-size: 30px;
+    padding: 17px 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
