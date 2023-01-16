@@ -35,6 +35,9 @@ export default defineConfig({
     {
       src: "cordova.js",
       defer: false,
+    },{
+      src: 'js/plugins/LaunchMyApp.js',
+      type: "text/javascript"
     }, {
       src: 'https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js',
     }, {

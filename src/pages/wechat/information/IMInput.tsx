@@ -7,6 +7,7 @@ import { AudioOutline, PictureOutline, AddCircleOutline, SmileOutline,
   TravelOutline, PhoneFill, StarOutline, UserContactOutline  } from 'antd-mobile-icons'
 import { useEffect, useState } from 'react'
 import { FormInstance } from 'antd-mobile/es/components/form'
+import { history } from '@umijs/max'
 interface IIMInputProps {
   form: FormInstance;
 }
@@ -29,12 +30,12 @@ export default ({ form }: IIMInputProps) => {
     onChange,
   }
 
+
   useEffect(()=>{
     console.log("value", value);
   }, [value])
 
-
-  const [ showActions, setShowActions ] = useState<boolean>(true);
+  const [ showActions, setShowActions ] = useState<boolean>(false);
 
   return <List className={styles['im-input-warp']} style={{'--padding-left': "0px", '--padding-right': '0px'}}>
       <List.Item>
@@ -74,7 +75,11 @@ export default ({ form }: IIMInputProps) => {
             </Grid.Item>
             <Grid.Item>
               <span className="wechat-grid-item">
-                <PhoneFill/>
+                <PhoneFill onClick={()=> {
+                  history.push({
+                    pathname: `/wechat/call/1000`
+                  })
+                }}/>
               </span>
             </Grid.Item>
             <Grid.Item>

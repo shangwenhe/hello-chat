@@ -3548,6 +3548,11 @@
   dependencies:
     "toggle-selection" "^1.0.6"
 
+"cordova-plugin-android-permissions@^1.1.5":
+  "integrity" "sha512-oTTV9cCMBqXTCmU+nYRebsP2IQfrtdvl2vYXHjoJgv5NHCIDgY4KFg6kJTcwXQOiymeGXuw0+MTvJJOueAdleA=="
+  "resolved" "https://registry.npmmirror.com/cordova-plugin-android-permissions/-/cordova-plugin-android-permissions-1.1.5.tgz"
+  "version" "1.1.5"
+
 "cordova-plugin-geolocation@^4.1.0":
   "integrity" "sha512-y5io/P10xGMxSn2KEqfv/fExK47eA1pmSonJdmDqDsaSADV9JpgdPx0mUSA08+5pzma/OS9R0LoODeDPx7Jvjg=="
   "resolved" "https://registry.npmmirror.com/cordova-plugin-geolocation/-/cordova-plugin-geolocation-4.1.0.tgz"
@@ -3560,6 +3565,11 @@
   dependencies:
     "qrcode-reader" "^1.0.4"
     "webrtc-adapter" "^3.1.4"
+
+"cordova-plugin-screen-orientation@^3.0.2":
+  "integrity" "sha512-2w6CMC+HGvbhogJetalwGurL2Fx8DQCCPy3wlSZHN1/W7WoQ5n9ujVozcoKrY4VaagK6bxrPFih+ElkO8Uqfzg=="
+  "resolved" "https://registry.npmmirror.com/cordova-plugin-screen-orientation/-/cordova-plugin-screen-orientation-3.0.2.tgz"
+  "version" "3.0.2"
 
 "cordova-plugin-splashscreen@^6.0.2":
   "integrity" "sha512-7JiUfnInir+SCOEgTJ+5/cHF3UFl69jp6cAQfHtJaaQt9Pli8D8yTJjU0HGlJCvryvsVs4Xlc7/sEJM7vLJgvg=="

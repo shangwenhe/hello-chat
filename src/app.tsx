@@ -1,5 +1,6 @@
 import type { RequestConfig } from '@umijs/max';
 import { ResponseLayout } from './api/request.config';
+// import { Permissions } from  'cordova-plugin-android-permissions/www/permissions'
 
 type APP_ENV = 'dev' | 'test' | 'prod';
 enum EEnv {
@@ -50,27 +51,6 @@ export const request: RequestConfig = {
   responseInterceptors: []
 };
 
-
 // export function render(renderClient: any) {
-//   window.addEventListener('deviceready', ()=> {
-//     QRScanner.prepare((err, status)=>{
-//       if (err) {
-//         console.error(err)
-//       }
-//       if (status.authorized) {
-
-//       } else if (status.denied) {
-
-//       } else {
-
-//       }
-//       console.log(err, status)
-//     })
-
-//     renderClient();
-//   }, false);
-
-//   window.addEventListener('load', ()=> {
-//     renderClient();
-//   }, false);
+//   renderClient();
 // }
