@@ -48,5 +48,10 @@ declare global {
     function getStatus(callback:(error: any, data: any)=>void): void;
   }
 
+  // 声名合并
+  interface Cordova {
+    InAppBrowser: {
+      open:(url: string, target: string, options: string) => void;
+    }
+  }
 }
-
