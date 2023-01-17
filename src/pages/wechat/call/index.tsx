@@ -19,15 +19,16 @@ const DiscoverVideo = () => {
         });
       }
     }
-
+    const orientation = window.screen.orientation;
+    console.log('orientation', orientation.angle)
     let constraints: MediaStreamConstraints = {
       audio: false,
       video: {
         width: {
-          ideal: window.outerWidth
+          ideal: window.innerWidth
         },
         height: {
-          ideal: window.outerHeight
+          ideal: window.innerHeight
         },
         frameRate: { ideal: 10, max: 15 },
         aspectRatio: {
@@ -41,6 +42,8 @@ const DiscoverVideo = () => {
       constraints = {
         ...constraints,
         video: {
+          ... constraints.video,
+
           width: {
             ideal: window.outerHeight
           },
