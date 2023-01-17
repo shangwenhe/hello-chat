@@ -3,33 +3,41 @@ import { useEffect, useRef, useState } from "react";
 import './index.less'
 import { RedoOutline, SoundMuteOutline, SoundOutline, AudioMutedOutline, PhoneFill, AudioOutline } from 'antd-mobile-icons'
 
+type GetUserMedia = (device: MediaDeviceInfo) => void;
+
 const DiscoverVideo = () => {
   const videoTag = useRef<HTMLVideoElement>(null);
   const [ videoInput, setVideoInput] = useState<MediaDeviceInfo[]>([]);
 
   const [ facingMode, setFacingMode ] = useState<number>(0);
 
-  const getUserMedia = (device: MediaDeviceInfo) => {
+  const trackStop = () => {
     const video = videoTag.current;
     if(video) {
-      const mediaStream = video.srcObject
+      const mediaStream = video.srcObject as MediaStream
       if (mediaStream) {
         mediaStream.getTracks().forEach(track => {
           track.stop();
         });
       }
     }
-    const orientation = window.screen.orientation;
-    console.log('orientation', orientation.angle)
-    let constraints: MediaStreamConstraints = {
+  }
+
+  const getUserMedia: GetUserMedia = (device: MediaDeviceInfo) => {
+
+    // const orientation = window.screen.orientation;
+    trackStop()
+    let width = { ideal: window.innerWidth }
+    let height = { ideal: window.innerHeight }
+    if (/Application\/helloChat/.test(window.navigator.userAgent)) {
+      [ width, height ] =  [ height, width ]
+    }
+
+    const constraints: MediaStreamConstraints = {
       audio: false,
       video: {
-        width: {
-          ideal: window.innerWidth
-        },
-        height: {
-          ideal: window.innerHeight
-        },
+        width,
+        height,
         frameRate: { ideal: 10, max: 15 },
         aspectRatio: {
           ideal: window.outerWidth/window.outerHeight
@@ -37,22 +45,6 @@ const DiscoverVideo = () => {
         deviceId: device.deviceId
       }
     };
-
-    if (/Application\/helloChat/.test(window.navigator.userAgent)) {
-      constraints = {
-        ...constraints,
-        video: {
-          ... constraints.video,
-
-          width: {
-            ideal: window.outerHeight
-          },
-          height: {
-            ideal: window.outerWidth
-          },
-        }
-       }
-    }
 
     navigator.mediaDevices.getUserMedia(constraints)
     .then(function(mediaStream) {
@@ -81,6 +73,7 @@ const DiscoverVideo = () => {
       })
       setVideoInput([...videoDevice])
     })
+    return trackStop;
   }, [])
 
 
